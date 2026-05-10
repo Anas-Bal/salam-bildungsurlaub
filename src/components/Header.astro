@@ -80,7 +80,7 @@ const navLinks = [
       {navLinks.map(link => (
         <a
           href={link.href}
-          class={`font-headline-md text-base ${activePage === link.id ? 'font-semibold text-primary' : 'font-medium text-on-surface-variant hover:text-secondary'} transition-soft px-2`}
+          class={`block w-full font-headline-md text-base ${activePage === link.id ? 'font-semibold text-primary' : 'font-medium text-on-surface-variant hover:text-secondary'} transition-soft px-2`}
         >
           {t(link.key, lang)}
         </a>
