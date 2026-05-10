@@ -1,0 +1,45 @@
+---
+import { t, localizePath } from '../utils/i18n';
+
+interface Props {
+  lang: 'de' | 'ar';
+  alt: 'de' | 'ar';
+  altPath: string;
+}
+
+const { lang } = Astro.props;
+
+const footerLinks = [
+  { href: localizePath('/impressum', lang), key: 'footer.impressum' },
+  { href: localizePath('/datenschutz', lang), key: 'footer.privacy' },
+  { href: localizePath('/agb', lang), key: 'footer.agb' },
+  { href: localizePath('/cookies', lang), key: 'footer.cookies' },
+  { href: localizePath('/kontakt', lang), key: 'footer.contact' },
+];
+---
+
+<footer class="bg-white w-full border-t border-outline-variant/30">
+  <div class="max-w-[1280px] mx-auto px-4 md:px-6 py-12 flex flex-col lg:flex-row justify-between items-center gap-10">
+    <div class="flex flex-col items-center lg:items-start gap-4">
+      <div class="flex items-center gap-3">
+        <img src="/logo.png" alt="Salam Logo" class="h-8 w-8 object-contain" />
+        <span class="text-lg font-bold text-primary-container" style="font-family: var(--font-headline-md);">
+          {t('site.title', lang)}
+        </span>
+      </div>
+      <p class="font-body-md text-xs uppercase tracking-widest text-on-surface-variant text-center lg:text-left opacity-70">
+        {t('footer.copyright', lang)}
+      </p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+      {footerLinks.map(link => (
+        <a
+          href={link.href}
+          class="font-headline-md text-xs uppercase tracking-widest text-on-surface-variant hover:text-secondary underline decoration-2 underline-offset-4 transition-all"
+        >
+          {t(link.key, lang)}
+        </a>
+      ))}
+    </div>
+  </div>
+</footer>

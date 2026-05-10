@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+import { t, getLang, altLang, localizePath } from '../utils/i18n';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+}
+
+const { title, description } = Astro.props;
+const url = Astro.url;
+const lang = getLang(url);
+const alt = altLang(lang);
+const pageTitle = title || t('site.title', lang);
+const pageDesc = description || t('site.description', lang);
+const altPath = localizePath(url.pathname.replace(`/${lang}`, '') || '/', alt);
+const isRtl = lang === 'ar';
+---
+
+<!DOCTYPE html>
+<html class="scroll-smooth" dir={isRtl ? 'rtl' : 'ltr'} lang={lang}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDesc} />
+  <link rel="alternate" hreflang="de" href={localizePath(url.pathname.replace(`/${lang}`, '') || '/', 'de')} />
+  <link rel="alternate" hreflang="ar" href={localizePath(url.pathname.replace(`/${lang}`, '') || '/', 'ar')} />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+  <Header lang={lang} alt={alt} altPath={altPath} />
+  <main class="min-h-screen">
+    <slot />
+  </main>
+  <Footer lang={lang} alt={alt} altPath={altPath} />
+  <CookieConsent lang={lang} />
+</body>
+</html>

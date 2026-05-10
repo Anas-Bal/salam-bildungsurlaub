@@ -1,0 +1,70 @@
+---
+import { t } from '../utils/i18n';
+
+interface Props {
+  lang: 'de' | 'ar';
+}
+
+const { lang } = Astro.props;
+---
+
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-high shadow-lg border-t border-outline-variant/30 p-4 md:p-6 hidden">
+  <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="flex-1">
+      <p class="font-body-md text-body-md text-on-surface">
+        {lang === 'de' ? 'Wir verwenden Cookies, um dir die bestmögliche Erfahrung auf unserer Website zu bieten.' : 'نستخدم ملفات تعريف الارتباط لتوفير أفضل تجربة ممكنة على موقعنا.'}
+      </p>
+    </div>
+    <div class="flex gap-3 shrink-0">
+      <button id="cookie-reject" class="px-4 py-2 border-2 border-primary text-primary rounded-lg font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-all text-xs md:text-sm">
+        {t('cookie.reject_all', lang)}
+      </button>
+      <button id="cookie-save" class="px-4 py-2 border-2 border-primary text-primary rounded-lg font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-all text-xs md:text-sm">
+        {t('cookie.save', lang)}
+      </button>
+      <button id="cookie-accept" class="px-4 py-2 rounded-lg font-label-sm text-label-sm shadow-sm active:scale-95 transition-all text-xs md:text-sm" style="background-color: #E07A5F; color: white;">
+        {t('cookie.accept_all', lang)}
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const rejectBtn = document.getElementById('cookie-reject');
+  const saveBtn = document.getElementById('cookie-save');
+
+  if (banner && !localStorage.getItem('cookie-consent')) {
+    banner.classList.remove('hidden');
+  }
+
+  function hasConsent() {
+    const raw = localStorage.getItem('cookie-consent');
+    if (!raw) return false;
+    // Old format: 'all' means consented
+    if (raw === 'all') return true;
+    // New format: JSON object — any key set to true means consented
+    try {
+      const parsed = JSON.parse(raw);
+      return typeof parsed === 'object' && parsed !== null;
+    } catch { return false; }
+  }
+
+  function setConsent(value: string) {
+    if (value === 'all') {
+      localStorage.setItem('cookie-consent', JSON.stringify({ analytics: true, marketing: true }));
+    } else {
+      localStorage.setItem('cookie-consent', JSON.stringify({ analytics: false, marketing: false }));
+    }
+    banner?.classList.add('hidden');
+  }
+
+  if (banner && !hasConsent()) {
+    banner.classList.remove('hidden');
+  }
+
+  acceptBtn?.addEventListener('click', () => setConsent('all'));
+  rejectBtn?.addEventListener('click', () => setConsent('essential'));
+  saveBtn?.addEventListener('click', () => setConsent('essential'));
+</script>

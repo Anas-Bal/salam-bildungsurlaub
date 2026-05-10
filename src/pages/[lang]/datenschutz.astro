@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLang, langPaths, localizePath } from '../../utils/i18n';
+
+export function getStaticPaths() { return langPaths(); }
+
+const { lang } = Astro.params;
+const isDe = lang === 'de';
+const contactPath = localizePath('/kontakt', lang);
+---
+
+<BaseLayout lang={lang}>
+  <section class="py-xl px-margin">
+    <div class="max-w-[800px] mx-auto">
+      <h1 class="font-headline-xl text-headline-xl text-primary mb-lg">{isDe ? 'Datenschutzerklärung' : 'Datenschutzerklärung (سياسة الخصوصية)'}</h1>
+      <div class="space-y-md font-body-md text-body-md">
+
+        {isDe ? (
+          <>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">Datenschutzerklärung (gemäß DSGVO)</h2>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">1. Allgemeine Hinweise</h2>
+              <p class="text-on-surface">Der Schutz Ihrer personenbezogenen Daten ist uns sehr wichtig. Wir behandeln Ihre Daten vertraulich und entsprechend der Datenschutz-Grundverordnung (DSGVO) sowie der geltenden europäischen Datenschutzgesetze.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">2. Erhebung personenbezogener Daten</h2>
+              <p class="text-on-surface">Personenbezogene Daten werden nur erhoben, wenn Sie uns diese freiwillig mitteilen, z. B. durch:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface">
+                <li>Anfrage einer kostenlosen Beratung</li>
+                <li>Anmeldung zu einem Bildungsurlaub-Programm</li>
+                <li>Nutzung von Kontaktformularen</li>
+              </ul>
+              <p class="text-on-surface mt-sm">Dabei können folgende Daten verarbeitet werden: Name, E-Mail-Adresse, Telefonnummer sowie Angaben zu Ihren Interessen.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">3. Zweck der Datenverarbeitung</h2>
+              <p class="text-on-surface">Die Verarbeitung Ihrer Daten erfolgt zu folgenden Zwecken:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface">
+                <li>Bereitstellung von Beratung und Bildungsangeboten</li>
+                <li>Bearbeitung von Anfragen und Anmeldungen</li>
+                <li>Kommunikation im Rahmen unserer Dienstleistungen</li>
+                <li>Verbesserung unseres Angebots und der Nutzererfahrung</li>
+              </ul>
+              <p class="text-on-surface mt-sm">Eine Nutzung Ihrer Daten für andere Zwecke erfolgt nur mit Ihrer ausdrücklichen Einwilligung.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">4. Speicherung der Daten</h2>
+              <p class="text-on-surface">Ihre Daten werden nur so lange gespeichert, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">5. Weitergabe von Daten</h2>
+              <p class="text-on-surface">Eine Weitergabe Ihrer Daten an Dritte erfolgt nicht ohne Ihre ausdrückliche Zustimmung. Ausnahmen bestehen nur bei:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface">
+                <li>technischen Dienstleistern (z. B. Hosting, E-Mail-Anbieter)</li>
+                <li>gesetzlichen Verpflichtungen gegenüber Behörden</li>
+              </ul>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">6. Cookies</h2>
+              <p class="text-on-surface">Unsere Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern und statistische Auswertungen zu ermöglichen. Sie können die Speicherung von Cookies jederzeit in Ihren Browsereinstellungen deaktivieren.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">7. Ihre Rechte gemäß DSGVO</h2>
+              <p class="text-on-surface">Sie haben jederzeit das Recht auf:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface">
+                <li>Auskunft über Ihre gespeicherten Daten</li>
+                <li>Berichtigung oder Löschung Ihrer Daten</li>
+                <li>Einschränkung der Verarbeitung</li>
+                <li>Widerruf Ihrer Einwilligung</li>
+                <li>Beschwerde bei einer zuständigen Datenschutzbehörde</li>
+              </ul>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">8. Datensicherheit</h2>
+              <p class="text-on-surface">Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten vor Verlust, Manipulation oder unbefugtem Zugriff zu schützen.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">9. Kontakt</h2>
+              <p class="text-on-surface">Bei Fragen zum Datenschutz können Sie uns jederzeit kontaktieren: <a href={contactPath} class="text-secondary hover:underline">Kontakt page</a>.</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">1. مقدمة</h2>
+              <p class="text-on-surface">نحن نأخذ حماية بياناتك الشخصية على محمل الجد. يتم التعامل مع بياناتك بسرية تامة ووفقًا للائحة العامة لحماية البيانات (GDPR) والقوانين الأوروبية المعمول بها.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">2. جمع البيانات الشخصية</h2>
+              <p class="text-on-surface">نقوم بجمع ومعالجة البيانات الشخصية فقط عندما تقدمها لنا طوعًا، مثل عند:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface" style={{ direction: 'rtl' }}>
+                <li>طلب استشارة مجانية</li>
+                <li>التسجيل في برامج Bildungsurlaub</li>
+                <li>ملء نماذج التواصل</li>
+              </ul>
+              <p class="text-on-surface mt-sm">تشمل البيانات الممكن جمعها: الاسم، البريد الإلكتروني، رقم الهاتف، وبيانات متعلقة بالاهتمام بالبرامج.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">3. استخدام البيانات</h2>
+              <p class="text-on-surface">نستخدم بياناتك للأغراض التالية:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface" style={{ direction: 'rtl' }}>
+                <li>تقديم الاستشارات والخدمات التعليمية</li>
+                <li>معالجة طلبات التسجيل</li>
+                <li>التواصل معك بخصوص البرامج</li>
+                <li>تحسين خدماتنا وتجربة المستخدم</li>
+              </ul>
+              <p class="text-on-surface mt-sm">لن يتم استخدام بياناتك لأغراض أخرى دون موافقتك.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">4. تخزين البيانات</h2>
+              <p class="text-on-surface">يتم تخزين بياناتك فقط للمدة اللازمة لتحقيق الغرض الذي جُمعت من أجله أو وفقًا للالتزامات القانونية.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">5. مشاركة البيانات مع أطراف ثالثة</h2>
+              <p class="text-on-surface">لا يتم بيع أو تأجير بياناتك. قد تتم مشاركة البيانات فقط مع:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface" style={{ direction: 'rtl' }}>
+                <li>مزودي خدمات تقنيين (مثل الاستضافة أو البريد الإلكتروني)</li>
+                <li>جهات تنظيمية عند وجود التزام قانوني</li>
+              </ul>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">6. ملفات تعريف الارتباط (Cookies)</h2>
+              <p class="text-on-surface">يستخدم موقعنا ملفات تعريف الارتباط لتحسين تجربة المستخدم وتحليل الأداء. يمكنك تعطيلها من إعدادات المتصفح في أي وقت.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">7. حقوقك حسب GDPR</h2>
+              <p class="text-on-surface">لديك الحق في:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface" style={{ direction: 'rtl' }}>
+                <li>الحصول على معلومات حول بياناتك المخزنة</li>
+                <li>تصحيح أو حذف بياناتك</li>
+                <li>تقييد معالجة بياناتك</li>
+                <li>سحب الموافقة في أي وقت</li>
+                <li>تقديم شكوى لدى جهة رقابية أوروبية</li>
+              </ul>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">8. أمان البيانات</h2>
+              <p class="text-on-surface">نستخدم إجراءات تقنية وتنظيمية لحماية بياناتك من الفقدان أو الوصول غير المصرح به.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">9. التواصل</h2>
+              <p class="text-on-surface">لأي استفسار حول حماية البيانات يمكنك التواصل معنا عبر: <a href={contactPath} class="text-secondary hover:underline">صفحة الاتصال بنا</a>.</p>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

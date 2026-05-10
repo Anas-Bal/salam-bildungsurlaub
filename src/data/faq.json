@@ -1,0 +1,130 @@
+[
+  {
+    "de": { "q": "Was ist Bildungsurlaub?", "a": "Bildungsurlaub ist ein gesetzlicher Anspruch auf bezahlte Freistellung für berufliche oder persönliche Weiterbildung." },
+    "ar": { "q": "ما هو الـ Bildungsurlaub؟", "a": "هو حق قانوني يمنح الموظفين إجازة مدفوعة الأجر للمشاركة في دورات تعليمية أو تطويرية." }
+  },
+  {
+    "de": { "q": "Wie viele Tage Bildungsurlaub stehen mir zu?", "a": "In den meisten Bundesländern haben Arbeitnehmer:innen Anspruch auf 5 Tage Bildungsurlaub pro Jahr." },
+    "ar": { "q": "كم عدد أيام Bildungsurlaub المتاحة؟", "a": "في معظم الولايات الألمانية يحق للموظفين الحصول على 5 أيام سنويًا." }
+  },
+  {
+    "de": { "q": "Wird mein Gehalt während des Bildungsurlaubs weitergezahlt?", "a": "Ja. Während des Bildungsurlaubs wird das reguläre Gehalt weiterhin vom Arbeitgeber gezahlt." },
+    "ar": { "q": "هل يستمر دفع الراتب أثناء Bildungsurlaub؟", "a": "نعم، يستمر صاحب العمل بدفع الراتب بشكل طبيعي خلال فترة الدورة." }
+  },
+  {
+    "de": { "q": "Wer kann Bildungsurlaub beantragen?", "a": "Grundsätzlich alle Arbeitnehmer:innen, deren Arbeitsort sich in einem Bundesland mit Bildungsurlaubsgesetz befindet." },
+    "ar": { "q": "من يحق له التقديم على Bildungsurlaub؟", "a": "بشكل عام جميع الموظفين الذين يعملون في ولاية ألمانية يوجد فيها قانون Bildungsurlaub." }
+  },
+  {
+    "de": { "q": "In welchen Bundesländern gibt es keinen Bildungsurlaub?", "a": "Aktuell gibt es in Bayern und Sachsen keinen gesetzlichen Anspruch auf Bildungsurlaub." },
+    "ar": { "q": "في أي ولايات لا يوجد Bildungsurlaub؟", "a": "لا يوجد حق قانوني حاليًا في:\n\nبافاريا (Bayern)\n\nساكسونيا (Sachsen)" }
+  },
+  {
+    "de": { "q": "Muss der Kurs offiziell anerkannt sein?", "a": "Ja. Der Kurs muss in der Regel offiziell als Bildungsurlaub anerkannt sein." },
+    "ar": { "q": "هل يجب أن تكون الدورة معترفًا بها رسميًا؟", "a": "نعم، يجب أن تكون الدورة معترفًا بها ضمن نظام Bildungsurlaub." }
+  },
+  {
+    "de": { "q": "Welche Themen werden anerkannt?", "a": "Zum Beispiel: Stressmanagement, Resilienztraining, Mentale Gesundheit, Kommunikation, Persönlichkeitsentwicklung, Sprachen, Politische Bildung." },
+    "ar": { "q": "ما أنواع الدورات التي يتم الاعتراف بها؟", "a": "مثل:\n\nإدارة الضغط النفسي\n\nالمرونة النفسية\n\nالصحة النفسية\n\nالتواصل\n\nتطوير الشخصية\n\nاللغات\n\nالتعليم السياسي" }
+  },
+  {
+    "de": { "q": "Kann ich Bildungsurlaub für mentale Gesundheit nutzen?", "a": "Ja. Viele Kurse im Bereich Stressbewältigung, Resilienz und psychische Gesundheit werden anerkannt." },
+    "ar": { "q": "هل يمكن استخدام Bildungsurlaub لدورات الصحة النفسية؟", "a": "نعم، العديد من دورات إدارة التوتر والمرونة النفسية والصحة النفسية يتم الاعتراف بها." }
+  },
+  {
+    "de": { "q": "Wie beantrage ich Bildungsurlaub?", "a": "Der Antrag wird schriftlich beim Arbeitgeber eingereicht – meist zusammen mit der Anerkennung des Kurses und den Kursinformationen." },
+    "ar": { "q": "كيف يمكنني التقديم على Bildungsurlaub؟", "a": "يتم تقديم طلب خطي لصاحب العمل مرفقًا بمعلومات الدورة والاعتراف الرسمي بها." }
+  },
+  {
+    "de": { "q": "Wie früh sollte ich Bildungsurlaub beantragen?", "a": "Empfohlen wird eine Antragstellung mindestens 4–8 Wochen vor Kursbeginn." },
+    "ar": { "q": "متى يجب تقديم الطلب؟", "a": "يفضل تقديم الطلب قبل 4–8 أسابيع من بداية الدورة." }
+  },
+  {
+    "de": { "q": "Kann mein Arbeitgeber den Antrag ablehnen?", "a": "Ja, jedoch nur unter bestimmten betrieblichen Gründen oder wenn gesetzliche Voraussetzungen nicht erfüllt sind." },
+    "ar": { "q": "هل يستطيع صاحب العمل رفض الطلب؟", "a": "نعم، لكن فقط لأسباب تشغيلية معينة أو عند عدم استيفاء الشروط القانونية." }
+  },
+  {
+    "de": { "q": "Muss ich meinem Arbeitgeber den Kursinhalt zeigen?", "a": "Ja. In der Regel müssen Informationen zum Kurs, Zeitraum und zur Anerkennung eingereicht werden." },
+    "ar": { "q": "هل يجب تقديم تفاصيل الدورة لصاحب العمل؟", "a": "نعم، عادة يجب تقديم معلومات عن محتوى الدورة ومدتها والاعتراف الرسمي بها." }
+  },
+  {
+    "de": { "q": "Wer bezahlt den Kurs?", "a": "Die Kurskosten tragen normalerweise die Teilnehmenden selbst. Das Gehalt zahlt weiterhin der Arbeitgeber." },
+    "ar": { "q": "من يدفع تكاليف الدورة؟", "a": "غالبًا يتحمل المشارك رسوم الدورة، بينما يستمر صاحب العمل بدفع الراتب." }
+  },
+  {
+    "de": { "q": "Wie lange dauert ein Bildungsurlaub?", "a": "Meistens dauert ein Bildungsurlaub 5 Tage." },
+    "ar": { "q": "كم تستغرق مدة Bildungsurlaub؟", "a": "غالبًا تكون 5 أيام متتالية." }
+  },
+  {
+    "de": { "q": "Gibt es eine Mindestanzahl an Unterrichtsstunden?", "a": "Ja. Meist sind mindestens 6 Unterrichtsstunden pro Tag erforderlich." },
+    "ar": { "q": "هل يوجد حد أدنى لساعات التعليم؟", "a": "نعم، غالبًا يجب أن تتضمن الدورة 6 ساعات تعليمية يوميًا على الأقل." }
+  },
+  {
+    "de": { "q": "Zählen Pausen zur Unterrichtszeit?", "a": "Nein. Pausen und Freizeitaktivitäten zählen normalerweise nicht als Unterrichtszeit." },
+    "ar": { "q": "هل تُحتسب فترات الاستراحة ضمن ساعات التعليم؟", "a": "لا، فترات الراحة والأنشطة الترفيهية لا تُحتسب عادة." }
+  },
+  {
+    "de": { "q": "Sind Gruppenarbeiten und Workshops anerkannt?", "a": "Ja. Interaktive Übungen, Gruppenarbeiten und Workshops zählen in der Regel zur Lernzeit." },
+    "ar": { "q": "هل تُحتسب ورشات العمل والأنشطة الجماعية؟", "a": "نعم، التمارين الجماعية وورشات العمل تعتبر جزءًا من وقت التعلم." }
+  },
+  {
+    "de": { "q": "Ist Bildungsurlaub auch online möglich?", "a": "Ja. Viele Bundesländer erkennen auch Online- oder Hybridkurse an." },
+    "ar": { "q": "هل يمكن أن تكون الدورة أونلاين؟", "a": "نعم، العديد من الولايات تعترف بالدورات الإلكترونية أو الهجينة." }
+  },
+  {
+    "de": { "q": "Bekomme ich ein Zertifikat nach dem Kurs?", "a": "Ja. Nach erfolgreicher Teilnahme erhalten Teilnehmende meist eine Teilnahmebescheinigung oder ein Zertifikat." },
+    "ar": { "q": "هل أحصل على شهادة بعد انتهاء الدورة؟", "a": "نعم، يحصل المشاركون عادة على شهادة مشاركة أو إتمام." }
+  },
+  {
+    "de": { "q": "Muss der Kurs einen beruflichen Bezug haben?", "a": "In vielen Bundesländern ja. Der Kurs sollte berufliche oder gesellschaftliche Kompetenzen fördern." },
+    "ar": { "q": "هل يجب أن تكون الدورة مرتبطة بالعمل؟", "a": "في كثير من الولايات نعم، يجب أن تدعم المهارات المهنية أو الاجتماعية." }
+  },
+  {
+    "de": { "q": "Können Selbstständige Bildungsurlaub nutzen?", "a": "Der gesetzliche Anspruch gilt meist nur für Arbeitnehmer:innen. Selbstständige können jedoch freiwillig teilnehmen." },
+    "ar": { "q": "هل يمكن للعاملين المستقلين الاستفادة من Bildungsurlaub؟", "a": "الحق القانوني يخص الموظفين غالبًا، لكن يمكن للمستقلين المشاركة بشكل عادي." }
+  },
+  {
+    "de": { "q": "Kann ich Bildungsurlaub jedes Jahr nutzen?", "a": "Ja. In den meisten Bundesländern besteht jährlich Anspruch auf Bildungsurlaub." },
+    "ar": { "q": "هل يمكنني استخدام Bildungsurlaub كل سنة؟", "a": "نعم، في معظم الولايات يوجد حق سنوي للاستفادة منه." }
+  },
+  {
+    "de": { "q": "Kann ich mehrere Tage ansammeln?", "a": "In einigen Bundesländern können zwei Jahre zusammengelegt werden, sodass bis zu 10 Tage möglich sind." },
+    "ar": { "q": "هل يمكن تجميع الأيام؟", "a": "في بعض الولايات يمكن دمج سنتين للحصول على حتى 10 أيام." }
+  },
+  {
+    "de": { "q": "Was passiert, wenn mein Antrag abgelehnt wird?", "a": "Eine Ablehnung muss begründet werden. Oft kann ein anderer Zeitraum vereinbart werden." },
+    "ar": { "q": "ماذا يحدث إذا تم رفض طلبي؟", "a": "يجب توضيح سبب الرفض، وغالبًا يمكن الاتفاق على موعد آخر." }
+  },
+  {
+    "de": { "q": "Kann ich Bildungsurlaub während der Probezeit beantragen?", "a": "Das hängt vom Bundesland ab. Häufig besteht der Anspruch erst nach mehreren Monaten Betriebszugehörigkeit." },
+    "ar": { "q": "هل يمكن التقديم أثناء فترة التجربة؟", "a": "يعتمد ذلك على الولاية، وغالبًا يبدأ الحق بعد عدة أشهر من العمل." }
+  },
+  {
+    "de": { "q": "Ist Bildungsurlaub dasselbe wie Urlaub?", "a": "Nein. Bildungsurlaub dient der Weiterbildung und ist kein Erholungsurlaub." },
+    "ar": { "q": "هل Bildungsurlaub هو نفسه الإجازة السنوية؟", "a": "لا، فهو مخصص للتعليم والتطوير وليس للراحة أو السفر." }
+  },
+  {
+    "de": { "q": "Warum lohnt sich Bildungsurlaub?", "a": "Bildungsurlaub stärkt fachliche Kompetenzen, mentale Gesundheit und persönliche Entwicklung – sowohl beruflich als auch privat." },
+    "ar": { "q": "لماذا يعتبر Bildungsurlaub مهمًا؟", "a": "لأنه يدعم التطور المهني، الصحة النفسية، وتنمية المهارات الشخصية." }
+  },
+  {
+    "de": { "q": "Welche Vorteile bieten Kurse zur psychischen Gesundheit?", "a": "Sie helfen dabei: Stress besser zu bewältigen, Burnout vorzubeugen, Resilienz aufzubauen, Kommunikation zu verbessern, Emotionale Balance zu stärken." },
+    "ar": { "q": "ما فوائد دورات الصحة النفسية؟", "a": "تساعد على:\n\nإدارة الضغط النفسي\n\nالوقاية من الاحتراق الوظيفي\n\nبناء المرونة النفسية\n\nتحسين التواصل\n\nتعزيز التوازن العاطفي" }
+  },
+  {
+    "de": { "q": "Kann ich Bildungsurlaub auch im Ausland machen?", "a": "Ja, sofern der Kurs offiziell anerkannt ist und die Voraussetzungen des jeweiligen Bundeslandes erfüllt." },
+    "ar": { "q": "هل يمكن أخذ Bildungsurlaub خارج ألمانيا؟", "a": "نعم، إذا كانت الدورة معترفًا بها وتستوفي شروط الولاية." }
+  },
+  {
+    "de": { "q": "Sind Bildungsurlaube steuerlich absetzbar?", "a": "Unter bestimmten Voraussetzungen können Kurskosten steuerlich geltend gemacht werden." },
+    "ar": { "q": "هل يمكن خصم تكاليف الدورة من الضرائب؟", "a": "في بعض الحالات يمكن احتسابها كمصاريف مهنية." }
+  },
+  {
+    "de": { "q": "Was muss ein anerkannter Kurs enthalten?", "a": "Ein anerkannter Kurs benötigt: klare Lernziele, strukturierte Inhalte, ausreichende Unterrichtsstunden, qualifizierte Trainer:innen, ein professionelles Bildungskonzept." },
+    "ar": { "q": "ما الذي يجب أن تتضمنه الدورة المعترف بها؟", "a": "يجب أن تحتوي على:\n\nأهداف تعليمية واضحة\n\nمحتوى منظم\n\nعدد كافٍ من الساعات التعليمية\n\nمدربين مؤهلين\n\nخطة تعليمية احترافية" }
+  },
+  {
+    "de": { "q": "Warum werden Kurse zur mentalen Gesundheit immer wichtiger?", "a": "Psychische Gesundheit spielt eine zentrale Rolle für Leistungsfähigkeit, Motivation und langfristiges Wohlbefinden im Berufsalltag." },
+    "ar": { "q": "لماذا أصبحت دورات الصحة النفسية مهمة اليوم؟", "a": "لأن الصحة النفسية تؤثر بشكل مباشر على الأداء، التركيز، الدافعية وجودة الحياة المهنية والشخصية." }
+  }
+]

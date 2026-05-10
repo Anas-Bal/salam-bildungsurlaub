@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { t, getLang, langPaths } from '../../utils/i18n';
+import faqs from '../../data/faq.json';
+
+export function getStaticPaths() { return langPaths(); }
+
+const { lang } = Astro.params;
+---
+
+<BaseLayout lang={lang}>
+  <section class="py-xl px-margin">
+    <div class="max-w-[800px] mx-auto">
+      <h1 class="font-headline-xl text-headline-xl text-primary text-center mb-xs">{t('faq.title', lang)}</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant text-center mb-lg">{t('faq.subtitle', lang)}</p>
+
+      <div class="space-y-sm">
+        {faqs.map((faq, i) => {
+          const content = lang === 'de' ? faq.de : faq.ar;
+          return (
+            <details class="group bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+              <summary class="flex justify-between items-center p-md cursor-pointer font-headline-md text-headline-md text-primary hover:bg-surface-container-low transition-soft list-none">
+                {content.q}
+                <span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+              </summary>
+              <div class="px-md pb-md font-body-md text-body-md text-on-surface border-t border-outline-variant/20 pt-sm whitespace-pre-line">
+                {content.a}
+              </div>
+            </details>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

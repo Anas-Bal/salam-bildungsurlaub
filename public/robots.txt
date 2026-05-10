@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salam-bildungsurlaub.de/sitemap-index.xml

@@ -1,0 +1,324 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { localizePath, langPaths } from '../../utils/i18n';
+
+export function getStaticPaths() { return langPaths(); }
+
+const { lang } = Astro.params;
+const isRtl = lang === 'ar';
+const programmePath = localizePath('/programme', lang);
+const contactPath = localizePath('/kontakt', lang);
+---
+
+<BaseLayout lang={lang}>
+  <div class="bg-[#FEFCE8]">
+    <!-- Hero Section -->
+    <section class="max-w-[1280px] mx-auto px-4 md:px-8 py-12 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="flex flex-col gap-6 md:gap-8 order-2 lg:order-1">
+        <h1 class="font-headline-xl text-4xl md:text-5xl lg:text-6xl text-primary-container leading-tight">
+          {isRtl ? 'Bildungsurlaub في سوريا' : 'Bildungsurlaub im Ausland 2026'}
+        </h1>
+        <div class="font-body-lg text-body-lg text-on-surface-variant space-y-4">
+          <p class="font-bold text-on-surface">
+            {isRtl ? 'إجازة مدفوعة للتعليم والتطوير المهني' : 'Bildungsurlaub für mentale Stärke & beruflichen Erfolg 2026'}
+          </p>
+          <p>
+            {isRtl
+              ? 'استثمر في صحتك النفسية وطوّر أداءك المهني من خلال برامج Bildungsurlaub المعترف بها، المصممة لدعم التوازن بين الحياة والعمل.'
+              : 'Investiere in deine mentale Gesundheit und steigere deine berufliche Leistungsfähigkeit mit staatlich anerkanntem Bildungsurlaub!'
+            }
+          </p>
+          <p class="whitespace-pre-line">
+            {isRtl
+              ? 'استفد من 5 أيام إجازة مدفوعة إضافية للمشاركة في دورات تطويرية في مجالات:\n\nإدارة الضغط النفسي\nالمرونة النفسية\nالتواصل الفعّال\nالوقاية من الاحتراق الوظيفي\n\nمن خلال تدريبات عملية، ستعزز مهاراتك الشخصية والمهنية وتحقق استقرارًا نفسيًا أفضل وأداءً أقوى في حياتك اليومية.'
+              : 'Nutze deine 5 zusätzlichen Urlaubstage für transformative Kurse in den Bereichen Stressmanagement, Resilienz, Kommunikation und Burnout-Prävention. Erlebe praxisnahe Trainings, die dich stärken, deinen Arbeitsalltag verbessern und dich langfristig widerstandsfähiger machen.'
+            }
+          </p>
+          <p class="flex items-center gap-2 text-primary font-semibold">
+            <span class="text-lg">{isRtl ? '📈' : ''}</span>
+            {isRtl ? 'لتحقيق وضوح ذهني، توازن داخلي، ونجاح مهني مستدام.' : 'Für mehr Klarheit, innere Stabilität und Erfolg im Beruf.'}
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <a
+            href={programmePath}
+            class="inline-flex items-center justify-center font-headline-md px-8 py-4 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            style="background-color: #E07A5F; color: white;"
+          >
+            {isRtl ? 'اكتشف البرامج' : 'Programme entdecken'}
+          </a>
+        </div>
+      </div>
+      <div class="relative w-full aspect-square md:aspect-auto md:h-[600px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white order-1 lg:order-2">
+        <img
+          src="/hero.png"
+          alt={isRtl ? 'مناقشة تعليمية احترافية' : 'Professional educational discussion'}
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="bg-surface-container-low/50 py-16 md:py-24">
+      <div class="max-w-[1280px] mx-auto px-4 md:px-8">
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="font-headline-lg text-headline-lg text-primary-container mb-4">
+            {isRtl ? 'لماذا الإجازة التعليمية (Bildungsurlaub)؟' : 'Warum Bildungsurlaub?'}
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+            {isRtl
+              ? 'حقك القانوني في التعليم والتطوير المهني المدفوع الأجر. اجمع بين التعلم وتجارب سفر لا تُنسى.'
+              : 'Dein gesetzliches Recht auf bezahlte Weiterbildung. Verbinde Lernen mit unvergesslichen Reiseerlebnissen.'
+            }
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Benefit Card 1 -->
+          <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-outline-variant/30 group">
+            <div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center mb-6 text-primary-container group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">event_available</span>
+            </div>
+            <h3 class="font-headline-md text-on-surface mb-3">{isRtl ? '5 أيام إضافية' : '5 Extra Tage'}</h3>
+            <p class="font-body-md text-on-surface-variant">
+              {isRtl
+                ? 'حق قانوني يتيح لك حتى 5 أيام إجازة مدفوعة سنويًا (حسب الولاية الألمانية) لتطوير مهاراتك بشكل موجه.'
+                : 'Gesetzlicher Anspruch auf bis zu 5 Tage bezahlten Sonderurlaub pro Jahr (je nach Bundesland), um dich gezielt weiterzubilden.'
+              }
+            </p>
+          </div>
+          <!-- Benefit Card 2 -->
+          <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-outline-variant/30 group">
+            <div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center mb-6 text-secondary group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            </div>
+            <h3 class="font-headline-md text-on-surface mb-3">{isRtl ? 'دافع قوي لمسارك المهني' : 'Karriere-Booster'}</h3>
+            <p class="font-body-md text-on-surface-variant">
+              {isRtl
+                ? 'تساعد إجازة التعليم على تطويرك المهني وتحسين فرصك المستقبلية في سوق العمل.'
+                : 'Der Bildungsurlaub unterstützt meine berufliche Weiterentwicklung und verbessert meine langfristigen Karrierechancen.'
+              }
+            </p>
+          </div>
+          <!-- Benefit Card 3 -->
+          <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-outline-variant/30 group">
+            <div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center mb-6 text-tertiary group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">handshake</span>
+            </div>
+            <h3 class="font-headline-md text-on-surface mb-3">{isRtl ? 'مكسب للطرفين: الموظف وصاحب العمل' : 'Win-Win für Arbeitnehmer und Arbeitgeber'}</h3>
+            <p class="font-body-md text-on-surface-variant">
+              {isRtl
+                ? 'المهارات المكتسبة تنعكس إيجابيًا على إنتاجيتك وتحسين بيئة العمل.'
+                : 'Die erlernten Fähigkeiten wirken sich positiv auf meine Produktivität und das Arbeitsklima aus.'
+              }
+            </p>
+          </div>
+          <!-- Benefit Card 4 -->
+          <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-outline-variant/30 group">
+            <div class="w-14 h-14 rounded-2xl bg-primary-fixed-dim flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">public</span>
+            </div>
+            <h3 class="font-headline-md text-on-surface mb-3">{isRtl ? 'تبادل ثقافي وبناء علاقات' : 'Interkultureller Austausch & Vernetzung'}</h3>
+            <p class="font-body-md text-on-surface-variant">
+              {isRtl
+                ? 'التواصل مع مشاركين دوليين يوسّع آفاقك ويساعدك على بناء شبكة علاقات عالمية.'
+                : 'Austausch mit internationalen Teilnehmenden erweitert die Perspektive und baut ein globales Netzwerk auf.'
+              }
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="py-16 md:py-24 max-w-[1280px] mx-auto px-4 md:px-8">
+      <div class="mb-12 md:mb-16">
+        <h2 class="font-headline-lg text-headline-lg text-primary-container mb-4">
+          {isRtl ? 'اكتشف سوريا' : 'Entdecke Syrien'}
+        </h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          {isRtl
+            ? 'عش تجربة إجازة تعليمية من الدرجة الأولى في أكثر المواقع التاريخية والملهمة في سوريا.'
+            : 'Erlebe erstklassigen Bildungsurlaub an den historischsten und inspirierendsten Orten Syriens.'
+          }
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+        <!-- Damascus -->
+        <div class="group">
+          <div class="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden mb-6 shadow-lg">
+            <img
+              src="/damascus.jpg"
+              alt={isRtl ? 'الجامع الأموي بدمشق' : 'Umayyaden-Moschee Damaskus'}
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class={`absolute ${isRtl ? 'bottom-6 right-6' : 'bottom-6 left-6'}`}>
+              <span class="bg-white/90 backdrop-blur-sm text-primary-container font-label-sm px-4 py-1.5 rounded-full shadow-sm">
+                {isRtl ? 'الثقافة والتاريخ' : 'Kultur & Geschichte'}
+              </span>
+            </div>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-primary transition-colors">
+            {isRtl ? 'دمشق' : 'Damaskus'}
+          </h3>
+          <p class="font-body-md text-on-surface-variant">
+            {isRtl
+              ? 'تعلم في أقدم مدينة مأهولة في العالم وانغمس في تقاليد عمرها آلاف السنين.'
+              : 'Lerne in der ältesten durchgehend bewohnten Stadt der Welt und tauche in jahrtausendealte Traditionen ein.'
+            }
+          </p>
+        </div>
+        <!-- Aleppo -->
+        <div class="group">
+          <div class="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden mb-6 shadow-lg">
+            <img
+              src="/Aleppo.png"
+              alt={isRtl ? 'حلب' : 'Aleppo'}
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class={`absolute ${isRtl ? 'bottom-6 right-6' : 'bottom-6 left-6'}`}>
+              <span class="bg-white/90 backdrop-blur-sm text-primary-container font-label-sm px-4 py-1.5 rounded-full shadow-sm">
+                {isRtl ? 'العمارة والحرف اليدوية' : 'Architektur & Handwerk'}
+              </span>
+            </div>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-primary transition-colors">
+            {isRtl ? 'حلب' : 'Aleppo'}
+          </h3>
+          <p class="font-body-md text-on-surface-variant">
+            {isRtl
+              ? 'اكتشف الأسواق الأسطورية والقلعة المهيبة خلال برنامج التعليم المستمر الخاص بك.'
+              : 'Entdecke die legendären Souks und die majestätische Zitadelle während deines Weiterbildungsprogramms.'
+            }
+          </p>
+        </div>
+        <!-- Latakia -->
+        <div class="group">
+          <div class="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden mb-6 shadow-lg">
+            <img
+              src="/Lattakia.jpg"
+              alt={isRtl ? 'اللاذقية' : 'Latakia'}
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class={`absolute ${isRtl ? 'bottom-6 right-6' : 'bottom-6 left-6'}`}>
+              <span class="bg-white/90 backdrop-blur-sm text-primary-container font-label-sm px-4 py-1.5 rounded-full shadow-sm">
+                {isRtl ? 'الآثار والتاريخ' : 'Archäologie & Geschichte'}
+              </span>
+            </div>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-primary transition-colors">
+            {isRtl ? 'اللاذقية' : 'Latakia'}
+          </h3>
+          <p class="font-body-md text-on-surface-variant">
+            {isRtl
+              ? 'اجمع بين التعلم المكثف والأجواء المريحة للساحل السوري على البحر المتوسط.'
+              : 'Verbinde intensives Lernen mit der entspannenden Atmosphäre der syrischen Mittelmeerküste.'
+            }
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works (Progress Stepper) -->
+    <section class="bg-white py-16 md:py-24 border-y border-outline-variant/20">
+      <div class="max-w-[1280px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="font-headline-lg text-headline-lg text-primary-container mb-6">
+            {isRtl ? 'طريقك إلى للتقديم على إجازة التعليم (Bildungsurlaub)' : 'Dein Weg zum Bildungsurlaub'}
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 md:mb-12">
+            {isRtl
+              ? 'نرافقك خطوة بخطوة من الفكرة الأولى حتى استلام الشهادة. العملية أبسط مما تتوقع.'
+              : 'Wir begleiten dich von der ersten Idee bis zur Zertifikatsübergabe. Der Prozess ist einfacher, als du denkst.'
+            }
+          </p>
+          <div class="flex flex-col gap-8 md:gap-10 relative">
+            <div class={`absolute ${isRtl ? 'right-[27px]' : 'left-[27px]'} top-6 bottom-6 w-0.5 bg-outline-variant/30 z-0`}></div>
+            <!-- Step 1 -->
+            <div class="relative z-10 flex gap-6 md:gap-8 items-start group">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-primary-container text-white flex items-center justify-center font-headline-md text-xl shadow-lg group-hover:scale-110 transition-transform">
+                1
+              </div>
+              <div class="pt-2">
+                <h4 class="font-headline-md text-on-surface mb-2">{isRtl ? 'اختيار البرنامج' : 'Programm wählen'}</h4>
+                <p class="font-body-md text-on-surface-variant">
+                  {isRtl
+                    ? 'اختر البرنامج المناسب لك في سوريا من بين عروضنا المتاحة.'
+                    : 'Wählen Sie Ihr gewünschtes Programm in Syrien aus unserem Angebot aus.'
+                  }
+                </p>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="relative z-10 flex gap-6 md:gap-8 items-start group">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-white border-2 border-primary-container text-primary-container flex items-center justify-center font-headline-md text-xl shadow-sm group-hover:scale-110 transition-transform">
+                2
+              </div>
+              <div class="pt-2">
+                <h4 class="font-headline-md text-on-surface mb-2">{isRtl ? 'تقديم الطلب' : 'Antrag stellen'}</h4>
+                <p class="font-body-md text-on-surface-variant">
+                  {isRtl
+                    ? 'نوفر لك جميع المستندات اللازمة لتقديم طلب إجازة التعليم لدى صاحب العمل.'
+                    : 'Wir stellen Ihnen alle nötigen Unterlagen für Ihren Bildungsurlaub-Antrag beim Arbeitgeber bereit.'
+                  }
+                </p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="relative z-10 flex gap-6 md:gap-8 items-start group">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-white border-2 border-outline-variant text-outline flex items-center justify-center font-headline-md text-xl group-hover:scale-110 transition-transform">
+                3
+              </div>
+              <div class="pt-2">
+                <h4 class="font-headline-md text-on-surface mb-2">{isRtl ? 'الوصول والنمو' : 'Ankommen & Wachsen'}</h4>
+                <p class="font-body-md text-on-surface-variant">
+                  {isRtl
+                    ? 'ابدأ رحلتك التطويرية في قلب مدينة حلب.'
+                    : 'Starten Sie Ihre transformative Reise im Herzen von Aleppo.'
+                  }
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative w-full aspect-square md:h-[600px] lg:h-[700px] rounded-[3rem] overflow-hidden shadow-2xl border-8 md:border-[12px] border-surface-container-low order-1 lg:order-2">
+          <img
+            src="/process.jpg"
+            alt={isRtl ? 'توضيح للإجازة التعليمية' : 'Illustration Bildungsurlaub'}
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="py-16 md:py-24 px-4 md:px-8">
+      <div class="max-w-[1280px] mx-auto bg-primary-container rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div class={`absolute -top-[30%] w-[600px] h-[600px] rounded-full bg-secondary-container/20 blur-3xl ${isRtl ? '-right-[10%]' : '-left-[10%]'}`}></div>
+          <div class={`absolute -bottom-[30%] w-[500px] h-[500px] rounded-full bg-primary-fixed/20 blur-3xl ${isRtl ? '-left-[10%]' : '-right-[10%]'}`}></div>
+        </div>
+        <div class="relative z-10 max-w-3xl mx-auto">
+          <h2 class="font-headline-xl text-3xl md:text-5xl text-white mb-6">
+            {isRtl ? 'هل أنت مستعد لمغامرتك القادمة؟' : 'Bereit für dein nächstes Abenteuer?'}
+          </h2>
+          <p class="font-body-lg text-lg md:text-xl text-primary-fixed mb-10 opacity-90">
+            {isRtl
+              ? 'احصل على استشارة مجانية من خبرائنا، واكتشف برنامج إجازة التعليم المثالي الذي يناسب أهدافك.'
+              : 'Lass dich kostenlos von unseren Experten beraten und finde den perfekten Bildungsurlaub für deine Ziele.'
+            }
+          </p>
+          <a
+            href={contactPath}
+            class="inline-flex items-center justify-center font-headline-md text-lg px-8 md:px-12 py-4 md:py-5 rounded-full hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
+            style="background-color: #E07A5F; color: white;"
+          >
+            {isRtl ? 'اطلب استشارتك المجانية الآن' : 'Jetzt kostenlose Beratung anfordern'}
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

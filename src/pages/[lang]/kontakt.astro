@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { t, getLang, langPaths } from '../../utils/i18n';
+
+export function getStaticPaths() { return langPaths(); }
+
+const { lang } = Astro.params;
+---
+
+<BaseLayout lang={lang}>
+  <section class="py-xl px-margin">
+    <div class="max-w-[900px] mx-auto">
+      <h1 class="font-headline-xl text-headline-xl text-primary text-center mb-xs">{t('contact.title', lang)}</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant text-center mb-lg">{t('contact.subtitle', lang)}</p>
+
+      <p class="font-body-md text-body-md text-on-surface text-center max-w-[650px] mx-auto mb-xl">{t('contact.intro', lang)}</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md mb-xl">
+        <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/30 text-center">
+          <span class="material-symbols-outlined text-3xl text-primary mb-sm" style="font-variation-settings: 'FILL' 1;">mail</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-xs">{t('contact.email', lang)}</h3>
+          <a href="mailto:info@salam-bildungsurlaub.de" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-soft">info@salam-bildungsurlaub.de</a>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/30 text-center">
+          <span class="material-symbols-outlined text-3xl text-primary mb-sm" style="font-variation-settings: 'FILL' 1;">phone</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-xs">{t('contact.phone', lang)}</h3>
+          <a href="tel:+490123456789" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-soft">+49 (0) 123 456 789</a>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/30 text-center">
+          <span class="material-symbols-outlined text-3xl text-primary mb-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-xs">{t('contact.address', lang)}</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">{lang === 'de' ? 'Aleppo, Syrien' : 'حلب، سوريا'}</p>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/30 text-center">
+          <svg class="w-8 h-8 text-primary mb-sm mx-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.31z"/></svg>
+          <h3 class="font-headline-md text-headline-md text-primary mb-xs">{t('contact.whatsapp', lang)}</h3>
+          <a href="https://wa.me/490123456789" target="_blank" rel="noopener noreferrer" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-soft">+49 (0) 123 456 789</a>
+        </div>
+      </div>
+
+      <div class="mb-md rounded-xl overflow-hidden shadow-md border border-outline-variant/30">
+        <iframe
+          src="https://maps.google.com/maps?q=36.20833010539185,37.143406191565816&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="350"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title={lang === 'de' ? 'Standortkarte' : 'خريطة الموقع'}
+        ></iframe>
+      </div>
+
+      <div class="text-center mb-xl">
+        <a
+          href="https://www.google.com/maps?q=36.20833010539185,37.143406191565816"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 font-headline-md text-sm px-6 py-3 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-on-primary transition-all duration-200"
+        >
+          <span class="material-symbols-outlined text-base">map</span>
+          {t('contact.map_link', lang)}
+        </a>
+      </div>
+
+      <div class="max-w-[600px] mx-auto">
+        <form id="contact-form" class="space-y-md bg-surface-container-lowest rounded-xl p-md shadow-sm">
+          <div>
+            <label class="font-label-sm text-label-sm text-on-surface-variant block mb-xs" for="name">{t('contact.name', lang)} <span class="text-error">*</span></label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white focus:border-primary focus:outline-none transition-soft font-body-md text-body-md" />
+          </div>
+          <div>
+            <label class="font-label-sm text-label-sm text-on-surface-variant block mb-xs" for="email">{t('contact.email', lang)} <span class="text-error">*</span></label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white focus:border-primary focus:outline-none transition-soft font-body-md text-body-md" />
+          </div>
+          <div>
+            <label class="font-label-sm text-label-sm text-on-surface-variant block mb-xs" for="message">{t('contact.message', lang)} <span class="text-error">*</span></label>
+            <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white focus:border-primary focus:outline-none transition-soft font-body-md text-body-md resize-y"></textarea>
+          </div>
+          <button type="submit" id="contact-submit" class="w-full inline-flex items-center justify-center font-headline-md text-sm md:text-base px-6 py-3 rounded-full hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200" style="background-color: #E07A5F; color: white;">
+            {t('contact.send', lang)}
+          </button>
+          <p id="contact-status" class="text-center font-body-md text-body-md hidden"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LcT4OIsAAAAACTeKqLwlqdx2LEMhSgkc85xBQRe" async defer></script>
+<script>
+  const RECAPTCHA_SITE_KEY = '6LcT4OIsAAAAACTeKqLwlqdx2LEMhSgkc85xBQRe';
+
+  document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const submitBtn = document.getElementById('contact-submit');
+    const status = document.getElementById('contact-status');
+    if (!status || !submitBtn) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Wird geprüft…';
+    status.classList.add('hidden');
+
+    try {
+      if (typeof grecaptcha === 'undefined') {
+        throw new Error('reCAPTCHA nicht geladen');
+      }
+      const token = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact_form' });
+
+      const res = await fetch('/api/verify-recaptcha', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token }),
+      });
+      const data = await res.json();
+
+      if (!data.success) {
+        throw new Error(data.error || 'Verifikation fehlgeschlagen');
+      }
+
+      const form = e.target;
+      const formData = new FormData(form);
+      const entries = [];
+      for (const [key, value] of formData.entries()) {
+        entries.push(key + ': ' + value);
+      }
+      const mailto = 'mailto:info@salam-bildungsurlaub.de?subject=Kontaktanfrage&body=' + encodeURIComponent(entries.join('\n'));
+      status.classList.remove('hidden');
+      status.textContent = 'Vielen Dank! Ihre Nachricht wurde erfasst. Wir melden uns bald.';
+      status.className = 'text-center font-body-md text-body-md text-primary';
+      form.reset();
+      window.open(mailto);
+    } catch (err) {
+      status.classList.remove('hidden');
+      status.textContent = err.message;
+      status.className = 'text-center font-body-md text-body-md text-error';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = document.querySelector('[lang="ar"]') ? 'إرسال' : 'Absenden';
+    }
+  });
+</script>

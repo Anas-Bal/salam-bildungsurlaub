@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLang, langPaths } from '../../utils/i18n';
+
+export function getStaticPaths() { return langPaths(); }
+
+const { lang } = Astro.params;
+const isDe = lang === 'de';
+---
+
+<BaseLayout lang={lang}>
+  <section class="py-xl px-margin">
+    <div class="max-w-[800px] mx-auto">
+      <h1 class="font-headline-xl text-headline-xl text-primary mb-lg">{isDe ? 'Impressum' : 'هيئة التحرير'}</h1>
+      <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm space-y-md font-body-md text-body-md">
+        <div>
+          <h2 class="font-headline-md text-headline-md text-primary mb-xs">Salam Bildungsurlaub</h2>
+          <p class="text-on-surface">
+            Musterstraße 123<br />
+            20095 Hamburg<br />
+            {isDe ? 'Deutschland' : 'ألمانيا'}
+          </p>
+        </div>
+        <div>
+          <h3 class="font-headline-md text-headline-md text-primary mb-xs">{isDe ? 'Kontakt' : 'جهة الاتصال'}</h3>
+          <p class="text-on-surface">
+            {isDe ? 'E-Mail' : 'البريد الإلكتروني'}: info@salam-bildungsurlaub.de<br />
+            {isDe ? 'Telefon' : 'الهاتف'}: +49 40 123456789
+          </p>
+        </div>
+        <div>
+          <h3 class="font-headline-md text-headline-md text-primary mb-xs">{isDe ? 'Vertreten durch' : 'يمثلها'}</h3>
+          <p class="text-on-surface">{isDe ? 'Max Mustermann, Geschäftsführer' : 'ماكس موستيرمان، المدير التنفيذي'}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

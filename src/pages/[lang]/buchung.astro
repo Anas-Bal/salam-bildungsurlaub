@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { t, getLang, langPaths } from '../../utils/i18n';
+import programs from '../../data/programs.json';
+
+export function getStaticPaths() { return langPaths(); }
+
+const { lang } = Astro.params;
+const datesByCourse: Record<string, string[]> = {};
+for (const p of programs) {
+  datesByCourse[p.slug] = p.de.dates;
+}
+---
+
+<BaseLayout lang={lang}>
+  <section class="py-xl px-margin">
+    <div class="max-w-[600px] mx-auto">
+      <h1 class="font-headline-xl text-headline-xl text-primary text-center mb-xs">{t('booking.title', lang)}</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant text-center mb-lg">{t('booking.subtitle', lang)}</p>
+
+      <form id="booking-form" class="space-y-md bg-surface-container-lowest rounded-xl p-md shadow-sm">
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant block mb-xs" for="course">{t('booking.course', lang)} <span class="text-error">*</span></label>
+          <select id="course" name="course" required class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white focus:border-primary focus:outline-none transition-soft font-body-md text-body-md">
+            <option value="">{lang === 'de' ? 'Bitte wählen' : 'الرجاء الاختيار'}</option>
+            {programs.map(p => {
+              const c = lang === 'de' ? p.de : p.ar;
+              return (
+                <option value={p.slug}>{c.title}</option>
+              );
+            })}
+          </select>
+        </div>
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant block mb-xs" for="name">{t('booking.name', lang)} <span class="text-error">*</span></label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white focus:border-primary focus:outline-none transition-soft font-body-md text-body-md" />
+        </div>
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant block mb-xs" for="email">{t('booking.email', lang)} <span class="text-error">*</span></label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white focus:border-primary focus:outline-none transition-soft font-body-md text-body-md" />
+        </div>
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant block mb-xs" for="phone">{t('booking.phone', lang)}</label>
+          <input type="tel" id="phone" name="phone" class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white focus:border-primary focus:outline-none transition-soft font-body-md text-body-md" />
+        </div>
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant block mb-xs" for="date">{t('booking.date', lang)} <span class="text-error">*</span></label>
+          <select id="date" name="date" required class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white focus:border-primary focus:outline-none transition-soft font-body-md text-body-md">
+            <option value="">{lang === 'de' ? 'Bitte zuerst Kurs wählen' : 'الرجاء اختيار الدورة أولاً'}</option>
+          </select>
+        </div>
+        <div>
+          <label class="font-label-sm text-label-sm text-on-surface-variant block mb-xs" for="message">{t('booking.message', lang)}</label>
+          <textarea id="message" name="message" rows="4" class="w-full px-4 py-2.5 rounded-lg border border-outline-variant bg-white focus:border-primary focus:outline-none transition-soft font-body-md text-body-md resize-y"></textarea>
+        </div>
+        <button type="submit" id="booking-submit" class="w-full inline-flex items-center justify-center font-headline-md text-sm md:text-base px-6 py-3 rounded-full hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200" style="background-color: #E07A5F; color: white;">
+          {t('booking.send', lang)}
+        </button>
+        <p id="booking-status" class="text-center font-body-md text-body-md hidden"></p>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LcT4OIsAAAAACTeKqLwlqdx2LEMhSgkc85xBQRe" async defer></script>
+<script define:vars={{ datesByCourse }} type="module">
+  const RECAPTCHA_SITE_KEY = '6LcT4OIsAAAAACTeKqLwlqdx2LEMhSgkc85xBQRe';
+
+  const datesByCourseData = datesByCourse;
+  const courseSelect = document.getElementById('course');
+  const dateSelect = document.getElementById('date');
+  const isRtl = document.documentElement.dir === 'rtl';
+
+  // Read ?kurs= from current URL (works at runtime, not build time)
+  const params = new URLSearchParams(window.location.search);
+  const preselectedSlug = params.get('kurs') || '';
+
+  if (courseSelect && dateSelect) {
+    function updateDates() {
+      const slug = courseSelect.value;
+      const placeholder = slug
+        ? (isRtl ? 'الرجاء الاختيار' : 'Bitte wählen')
+        : (isRtl ? 'الرجاء اختيار الدورة أولاً' : 'Bitte zuerst Kurs wählen');
+      dateSelect.innerHTML = '<option value="">' + placeholder + '</option>';
+      if (slug && datesByCourseData[slug]) {
+        datesByCourseData[slug].forEach(function(d) {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          dateSelect.appendChild(opt);
+        });
+      }
+    }
+
+    courseSelect.addEventListener('change', updateDates);
+    if (preselectedSlug) {
+      courseSelect.value = preselectedSlug;
+      updateDates();
+    } else if (courseSelect.value) {
+      updateDates();
+    }
+  }
+
+  document.getElementById('booking-form')?.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const submitBtn = document.getElementById('booking-submit');
+    const status = document.getElementById('booking-status');
+    if (!status || !submitBtn) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Wird geprüft…';
+    status.classList.add('hidden');
+
+    try {
+      if (typeof grecaptcha === 'undefined') {
+        throw new Error('reCAPTCHA nicht geladen');
+      }
+      const token = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'booking_form' });
+
+      const res = await fetch('/api/verify-recaptcha', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token }),
+      });
+      const data = await res.json();
+
+      if (!data.success) {
+        throw new Error(data.error || 'Verifikation fehlgeschlagen');
+      }
+
+      const form = e.target;
+      const formData = new FormData(form);
+      const entries = [];
+      for (const [key, value] of formData.entries()) {
+        entries.push(key + ': ' + value);
+      }
+      const mailto = 'mailto:info@salam-bildungsurlaub.de?subject=Buchungsanfrage&body=' + encodeURIComponent(entries.join('\n'));
+      status.classList.remove('hidden');
+      status.textContent = 'Vielen Dank! Ihre Anfrage wurde erfasst. Wir melden uns innerhalb von 24 Stunden.';
+      status.className = 'text-center font-body-md text-body-md text-primary';
+      form.reset();
+      window.open(mailto);
+    } catch (err) {
+      status.classList.remove('hidden');
+      status.textContent = err.message;
+      status.className = 'text-center font-body-md text-body-md text-error';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = document.querySelector('[lang="ar"]') ? 'إرسال الطلب' : 'Anfrage senden';
+    }
+  });
+</script>

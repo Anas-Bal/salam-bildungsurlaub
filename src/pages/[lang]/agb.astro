@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLang, langPaths } from '../../utils/i18n';
+
+export function getStaticPaths() { return langPaths(); }
+
+const { lang } = Astro.params;
+const isDe = lang === 'de';
+---
+
+<BaseLayout lang={lang}>
+  <section class="py-xl px-margin">
+    <div class="max-w-[800px] mx-auto">
+      <h1 class="font-headline-xl text-headline-xl text-primary mb-lg">{isDe ? 'Allgemeine Geschäftsbedingungen (AGB)' : 'الشروط والأحكام العامة'}</h1>
+      <div class="space-y-md font-body-md text-body-md">
+
+        {isDe ? (
+          <>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">1. Geltungsbereich</h2>
+              <p class="text-on-surface">Diese Allgemeinen Geschäftsbedingungen gelten für alle Leistungen der [Firmenname], einschließlich Schulungen, Bildungsprogramme und Beratungen.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">2. Art der Leistungen</h2>
+              <p class="text-on-surface">Das Unternehmen bietet Trainings- und Bildungsprogramme in den Bereichen berufliche Entwicklung, mentale Gesundheit und persönliche Kompetenzen an. Einige Programme können im Rahmen von Bildungsurlaub in Deutschland genutzt werden, abhängig von den jeweiligen gesetzlichen Regelungen und Anerkennungen der deutschen Bundesländer.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">3. Anmeldung und Vertragsabschluss</h2>
+              <p class="text-on-surface">Die Anmeldung erfolgt über die Website oder andere offizielle Kommunikationswege. Der Vertrag kommt mit der Bestätigung durch das Unternehmen zustande.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">4. Leistungen</h2>
+              <p class="text-on-surface">Der Inhalt der jeweiligen Programme ergibt sich aus der Programmbeschreibung. Das Unternehmen behält sich organisatorische Änderungen vor, sofern der wesentliche Charakter des Programms nicht beeinträchtigt wird.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">5. Preise und Zahlung</h2>
+              <p class="text-on-surface">Die Preise werden für jedes Programm separat angegeben. Die Zahlung erfolgt vor Beginn der Teilnahme über die angebotenen Zahlungsmethoden.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">6. Stornierung und Rückerstattung</h2>
+              <p class="text-on-surface">Eine Stornierung ist wie folgt möglich:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface">
+                <li>bis 30 Tage vorher: 100 % Rückerstattung</li>
+                <li>29–14 Tage vorher: 50 % Rückerstattung</li>
+                <li>weniger als 14 Tage: keine Rückerstattung</li>
+              </ul>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">7. Teilnahmeverantwortung</h2>
+              <p class="text-on-surface">Teilnehmende sind selbst verantwortlich für:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface">
+                <li>die Prüfung der Anerkennung im Rahmen von Bildungsurlaub</li>
+                <li>ggf. die Zustimmung des Arbeitgebers</li>
+                <li>die Erfüllung der Teilnahmebedingungen</li>
+              </ul>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">8. Haftung</h2>
+              <p class="text-on-surface">Das Unternehmen haftet nur bei Vorsatz oder grober Fahrlässigkeit. Keine Haftung wird für die Anerkennung durch externe Behörden oder Arbeitgeber übernommen.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">9. Änderungen und Absage</h2>
+              <p class="text-on-surface">Das Unternehmen behält sich das Recht vor, Programme bei Bedarf oder höherer Gewalt zu ändern oder abzusagen.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">10. Datenschutz</h2>
+              <p class="text-on-surface">Personenbezogene Daten werden gemäß den geltenden Datenschutzprinzipien des Unternehmens verarbeitet.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">11. Anwendbares Recht</h2>
+              <p class="text-on-surface">Es gilt das Recht des Landes, in dem das Unternehmen registriert ist, sofern nichts anderes vereinbart wurde.</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">1. نطاق التطبيق</h2>
+              <p class="text-on-surface">تنطبق هذه الشروط والأحكام على جميع الخدمات المقدمة من قبل [اسم الشركة]، بما في ذلك الدورات التدريبية، البرامج التعليمية، والاستشارات.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">2. طبيعة الخدمات</h2>
+              <p class="text-on-surface">تقدم الشركة برامج تدريبية وتعليمية في مجالات التطوير المهني والصحة النفسية والمهارات الشخصية. وقد تكون بعض هذه البرامج قابلة للاستخدام ضمن طلب إجازة تعليمية (Bildungsurlaub) في ألمانيا، وذلك حسب القوانين والجهات المعتمدة في كل ولاية ألمانية.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">3. التسجيل وإبرام العقد</h2>
+              <p class="text-on-surface">يتم التسجيل عبر الموقع الإلكتروني أو وسائل التواصل المعتمدة. ويعتبر العقد ساريًا بعد تأكيد التسجيل من قبل الشركة.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">4. الخدمات المقدمة</h2>
+              <p class="text-on-surface">تحدد محتويات كل برنامج تدريبي في وصفه الخاص. تحتفظ الشركة بحق إجراء تعديلات تنظيمية لا تؤثر على الهدف الأساسي للبرنامج.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">5. الرسوم والدفع</h2>
+              <p class="text-on-surface">يتم تحديد الأسعار بشكل واضح لكل برنامج. يجب دفع الرسوم قبل بدء البرنامج عبر الوسائل المتاحة (تحويل بنكي أو غيره).</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">6. الإلغاء والاسترجاع</h2>
+              <p class="text-on-surface">يمكن إلغاء التسجيل وفق الشروط التالية:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface">
+                <li>قبل 30 يومًا: استرداد كامل</li>
+                <li>من 29 إلى 14 يومًا: استرداد 50%</li>
+                <li>أقل من 14 يومًا: لا يوجد استرداد</li>
+              </ul>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">7. مسؤولية المشاركة</h2>
+              <p class="text-on-surface">المشارك مسؤول عن:</p>
+              <ul class="list-disc list-inside mt-sm space-y-1 text-on-surface">
+                <li>التحقق من إمكانية قبول البرنامج ضمن طلبات Bildungsurlaub في بلده</li>
+                <li>الحصول على موافقة صاحب العمل إن لزم</li>
+                <li>الالتزام بمتطلبات البرنامج</li>
+              </ul>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">8. المسؤولية القانونية</h2>
+              <p class="text-on-surface">تتحمل الشركة المسؤولية فقط في حالات الإهمال الجسيم أو الخطأ المتعمد. ولا تتحمل أي مسؤولية عن قرارات الاعتراف أو القبول من قبل جهات خارجية في ألمانيا.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">9. التعديلات أو الإلغاء</h2>
+              <p class="text-on-surface">يحق للشركة تعديل أو إلغاء البرامج في حالات الضرورة أو الظروف القاهرة.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">10. حماية البيانات</h2>
+              <p class="text-on-surface">تتم معالجة البيانات الشخصية وفق سياسة الخصوصية المعتمدة لدى الشركة وبما يتوافق مع المبادئ الدولية لحماية البيانات.</p>
+            </div>
+            <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+              <h2 class="font-headline-md text-headline-md text-primary mb-sm">11. القانون المعتمد</h2>
+              <p class="text-on-surface">تخضع هذه الشروط للقوانين المعمول بها في بلد تسجيل الشركة، ما لم يُتفق على خلاف ذلك.</p>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

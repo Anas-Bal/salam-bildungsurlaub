@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { t, getLang, langPaths } from '../../utils/i18n';
+
+export function getStaticPaths() { return langPaths(); }
+
+const { lang } = Astro.params;
+const isDe = lang === 'de';
+const isRtl = lang === 'ar';
+---
+
+<BaseLayout lang={lang}>
+  <section class="py-xl px-margin">
+    <div class="max-w-[800px] mx-auto">
+      <h1 class="font-headline-xl text-headline-xl text-primary mb-lg">{t('cookie.title', lang)}</h1>
+      <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+        <div class="p-lg bg-primary text-on-primary">
+          <p class="font-body-md text-body-md opacity-90">
+            {isDe
+              ? 'Wir verwenden Cookies, um deine Erfahrung zu verbessern und die Plattform effizient zu betreiben.'
+              : 'نستخدم ملفات تعريف الارتباط لتحسين تجربتك وضمان عمل المنصة بكفاءة.'}
+          </p>
+        </div>
+        <div class="p-lg space-y-md">
+          {[
+            { key: 'essential', always: true },
+            { key: 'analytics', always: false },
+            { key: 'marketing', always: false },
+          ].map(cat => (
+            <div class="flex items-start gap-md p-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+              <div class="flex-grow">
+                <div class="flex justify-between items-center mb-xs">
+                  <h3 class="font-headline-md text-headline-md text-primary">{t(`cookie.${cat.key}`, lang)}</h3>
+                  {cat.always && (
+                    <span class="bg-outline-variant text-on-surface-variant px-sm py-[2px] rounded-full font-label-sm text-[12px]">
+                      {isDe ? 'Immer aktiv' : 'مفعل دائماً'}
+                    </span>
+                  )}
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant">{t(`cookie.${cat.key}.desc`, lang)}</p>
+              </div>
+              {!cat.always && (
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" class="sr-only peer" data-category={cat.key} />
+                  <div class="toggle-dot w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                </label>
+              )}
+            </div>
+          ))}
+        </div>
+        <div class="p-lg bg-surface-container-high border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-md">
+          <p class="font-label-sm text-label-sm text-on-surface-variant">
+            {isDe ? 'Durch Klicken auf "Speichern" stimmst du unserer Datenschutzerklärung zu.' : 'بالنقر على "حفظ"، فإنك توافق على سياسة الخصوصية الخاصة بنا.'}
+          </p>
+          <div class="flex gap-sm">
+            <button data-action="reject" class="px-lg py-sm border-2 border-primary text-primary rounded-lg font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-all">
+              {t('cookie.reject_all', lang)}
+            </button>
+            <button data-action="save" class="px-lg py-sm rounded-lg font-label-sm text-label-sm shadow-sm active:scale-95 transition-all" style="background-color: #E07A5F; color: white;">
+              {t('cookie.save', lang)}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  function getPreferences() {
+    try {
+      const raw = localStorage.getItem('cookie-consent');
+      if (!raw) return { analytics: false, marketing: false };
+      const parsed = JSON.parse(raw);
+      if (typeof parsed === 'object' && parsed !== null) {
+        return { analytics: !!parsed.analytics, marketing: !!parsed.marketing };
+      }
+    } catch {}
+    // Legacy: 'all' means both accepted
+    if (raw === 'all') return { analytics: true, marketing: true };
+    return { analytics: false, marketing: false };
+  }
+
+  function savePreferences(prefs) {
+    localStorage.setItem('cookie-consent', JSON.stringify(prefs));
+  }
+
+  // Load saved preferences
+  const analyticsCheckbox = document.querySelector('input[data-category="analytics"]');
+  const marketingCheckbox = document.querySelector('input[data-category="marketing"]');
+  const prefs = getPreferences();
+  if (analyticsCheckbox) analyticsCheckbox.checked = prefs.analytics;
+  if (marketingCheckbox) marketingCheckbox.checked = prefs.marketing;
+
+  // Save preferences
+  document.querySelector('[data-action="save"]')?.addEventListener('click', () => {
+    savePreferences({
+      analytics: analyticsCheckbox?.checked || false,
+      marketing: marketingCheckbox?.checked || false,
+    });
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.classList.add('hidden');
+  });
+
+  // Reject all
+  document.querySelector('[data-action="reject"]')?.addEventListener('click', () => {
+    savePreferences({ analytics: false, marketing: false });
+    if (analyticsCheckbox) analyticsCheckbox.checked = false;
+    if (marketingCheckbox) marketingCheckbox.checked = false;
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.classList.add('hidden');
+  });
+</script>
+
+<style>
+  .peer:checked ~ .toggle-dot::after {
+    transform: translateX(100%);
+  }
+  html[dir="rtl"] .peer:checked ~ .toggle-dot::after {
+    transform: translateX(-100%);
+  }
+</style>

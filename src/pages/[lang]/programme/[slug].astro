@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { t, localizePath } from '../../../utils/i18n';
+import programs from '../../../data/programs.json';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const lang of ['de', 'ar'] as const) {
+    for (const prog of programs) {
+      paths.push({ params: { lang, slug: prog.slug } });
+    }
+  }
+  return paths;
+}
+
+const { lang, slug } = Astro.params;
+const program = programs.find(p => p.slug === slug);
+if (!program) {
+  return Astro.redirect(`/${lang}/404`);
+}
+const content = lang === 'de' ? program.de : program.ar;
+---
+
+<BaseLayout lang={lang}>
+  <section class="py-xl px-margin">
+    <div class="max-w-[1280px] mx-auto">
+      <a href={localizePath('/programme', lang)} class="inline-flex items-center gap-1 text-on-surface-variant hover:text-secondary mb-md transition-soft">
+        <span class="material-symbols-outlined">{lang === 'de' ? 'arrow_back' : 'arrow_forward'}</span>
+        {lang === 'de' ? 'Zurück zu den Programmen' : 'العودة إلى البرامج'}
+      </a>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+        <div class="lg:col-span-2">
+          {program.image && (
+            <div class="h-64 md:h-80 rounded-xl overflow-hidden mb-md">
+              <img src={program.image} alt={content.title} class="w-full h-full object-cover" />
+            </div>
+          )}
+          <h1 class="font-headline-xl text-headline-xl text-primary mb-xs">{content.title}</h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mb-md">{content.subtitle}</p>
+          <div class="prose max-w-none font-body-md text-body-md text-on-surface">
+            <p>{content.description}</p>
+          </div>
+
+          <!-- Lernziele -->
+          {content.lernziele && content.lernziele.length > 0 && (
+            <div class="mt-lg">
+              <h2 class="font-headline-lg text-headline-lg text-primary mb-md">{t('course.lernziele', lang)}</h2>
+              <ul class="space-y-sm">
+                {content.lernziele.map((ziel: string) => (
+                  <li class="flex items-start gap-3 font-body-md text-body-md text-on-surface">
+                    <span class="material-symbols-outlined text-secondary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    {ziel}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <!-- Kursmodule -->
+          {content.kursmodule && content.kursmodule.length > 0 && (
+            <div class="mt-lg">
+              <h2 class="font-headline-lg text-headline-lg text-primary mb-md">{t('course.kursmodule', lang)}</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                {content.kursmodule.map((modul: { title: string; description: string }) => (
+                  <div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant/30 hover:shadow-md transition-shadow">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-xs">{modul.title}</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">{modul.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Anerkennung in den Bundesländern -->
+          {content.anerkennung && content.anerkennung.bundeslaender && content.anerkennung.bundeslaender.length > 0 && (
+            <div class="mt-lg">
+              <h2 class="font-headline-lg text-headline-lg text-primary mb-md">{t('course.anerkennung', lang)}</h2>
+              <div class="flex flex-wrap gap-sm">
+                {content.anerkennung.bundeslaender.map((bl: { name: string; status: string }) => (
+                  <div class="inline-flex items-center gap-2 bg-surface-container-low rounded-full pl-md pr-sm py-1.5 border border-outline-variant/30">
+                    <span class="font-body-md text-body-md">{bl.name}</span>
+                    <span class="inline-flex items-center text-xs font-bold px-2.5 py-0.5 rounded-full"
+                      class:list={{ 'bg-secondary-fixed-dim text-on-secondary-fixed': bl.status === 'beantragt', 'bg-amber-100 text-amber-800': bl.status === 'kein_recht' }}>
+                      {bl.status === 'beantragt' ? t('course.anerkennung.status', lang) : t('course.anerkennung.status_kein_recht', lang)}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Hinweis -->
+          <div class="mt-lg bg-amber-50 border border-amber-200 rounded-xl p-md">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-amber-600 shrink-0 mt-0.5">info</span>
+              <div>
+                <h3 class="font-headline-md text-headline-md text-amber-800 mb-xs">{t('course.hinweis', lang)}</h3>
+                <p class="font-body-md text-body-md text-amber-700">
+                  {lang === 'de'
+                    ? 'Dieser Kurs konzentriert sich auf Prävention und persönliche Weiterentwicklung, nicht auf klinisch-medizinische Behandlungen.'
+                    : 'تركز هذه الدورة على الوقاية والتطوير الشخصي، وليس على العلاجات الطبية السريرية.'
+                  }
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-1">
+          <div class="bg-surface-container-lowest rounded-xl shadow-sm p-md sticky top-24">
+            <h3 class="font-headline-md text-headline-md text-primary mb-md">{t('course.dates', lang)}</h3>
+            <div class="space-y-sm mb-md">
+              {content.dates.map((date: string) => (
+                <div class="flex items-center gap-2 p-sm bg-surface-container-low rounded-lg">
+                  <span class="material-symbols-outlined text-primary text-base">calendar_month</span>
+                  <span class="font-body-md text-body-md">{date}</span>
+                </div>
+              ))}
+            </div>
+
+            <div class="border-t border-outline-variant/30 pt-md space-y-sm">
+              <div class="flex justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">{t('course.duration', lang)}</span>
+                <span class="font-body-md text-body-md font-medium">{content.duration}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">{t('course.location', lang)}</span>
+                <span class="font-body-md text-body-md font-medium">{content.location}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">{t('course.pensum', lang)}</span>
+                <span class="font-body-md text-body-md font-medium">{content.pensum}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">{t('course.price', lang)}</span>
+                <span class="font-headline-md text-headline-md font-bold text-primary">{content.price}</span>
+              </div>
+            </div>
+
+            <a
+              href={localizePath(`/buchung?kurs=${program.slug}`, lang)}
+              class="w-full inline-flex items-center justify-center font-headline-md text-sm md:text-base px-6 py-3 rounded-full hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+              style="background-color: #E07A5F; color: white;"
+            >
+              {t('programme.book', lang)}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

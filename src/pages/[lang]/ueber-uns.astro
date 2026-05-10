@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { t, getLang, langPaths } from '../../utils/i18n';
+
+export function getStaticPaths() { return langPaths(); }
+
+const { lang } = Astro.params;
+const isDe = lang === 'de';
+---
+
+<BaseLayout lang={lang}>
+  <section class="py-xl px-margin">
+    <div class="max-w-[800px] mx-auto">
+      <h1 class="font-headline-xl text-headline-xl text-primary text-center mb-xs">{t('about.title', lang)}</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant text-center mb-lg">{t('about.subtitle', lang)}</p>
+
+      <div class="space-y-md">
+        <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+          <p class="font-body-md text-body-md text-on-surface mb-md">
+            {isDe
+              ? 'Wir sind eine Initiative zur Förderung der psychischen Gesundheit durch einen ganzheitlichen Ansatz, der individuelle psychologische Unterstützung, gesellschaftliche Aufklärung und praxisorientierte Trainings kombiniert.'
+              : 'نحن مبادرة متخصصة في تعزيز الصحة النفسية من خلال نهج شامل يجمع بين الدعم النفسي الفردي، التوعية المجتمعية، والتدريب التطبيقي.'}
+          </p>
+          <p class="font-body-md text-body-md text-on-surface">
+            {isDe
+              ? 'Wir glauben, dass mentale Gesundheit ein zentraler Bestandteil der Lebensqualität ist, und schaffen einen sicheren Raum für Verständnis, Heilung und persönliches Wachstum.'
+              : 'نؤمن بأن الصحة النفسية جزء أساسي من جودة الحياة، ونعمل على توفير بيئة آمنة تساعد الأفراد على الفهم، التعافي، والنمو.'}
+          </p>
+        </div>
+
+        <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+          <h2 class="font-headline-md text-headline-md text-primary mb-sm">
+            {isDe ? '🎯 Unsere Mission' : '🎯 مهمتنا'}
+          </h2>
+          <p class="font-body-md text-body-md text-on-surface mb-sm">
+            {isDe
+              ? 'Unsere Mission ist es, die psychische Gesundheit von Einzelpersonen und der Gesellschaft zu stärken durch:'
+              : 'هدفنا هو دعم الصحة النفسية للأفراد والمجتمع من خلال:'}
+          </p>
+          <ul class="list-disc list-inside space-y-1 font-body-md text-body-md text-on-surface">
+            <li>{isDe ? 'Individuelle und gruppenbasierte psychologische Unterstützung' : 'تقديم جلسات دعم نفسي فردية وجماعية'}</li>
+            <li>{isDe ? 'Ausbildungs- und Trainingsprogramme für psychologische Fachkräfte' : 'برامج تدريب وتأهيل للمرشدين النفسيين'}</li>
+            <li>{isDe ? 'Workshops und Beratungsangebote für Jugendliche und Universitäten' : 'ورشات عمل وتوجيه للشباب والجامعات'}</li>
+            <li>{isDe ? 'Förderung wissenschaftlich fundierter psychischer Aufklärung' : 'نشر التوعية النفسية المبنية على أسس علمية'}</li>
+            <li>{isDe ? 'Entwicklung von Initiativen zur Prävention und Sensibilisierung' : 'تطوير مبادرات تعزز الوعي والوقاية النفسية'}</li>
+            <li>{isDe ? 'Aufbau digitaler Lösungen für einen besseren Zugang zu psychologischen Dienstleistungen' : 'بناء حلول رقمية لتسهيل الوصول إلى خدمات الصحة النفسية'}</li>
+            <li>{isDe ? 'Unterstützung von Fachkräften im Bereich Marketing und Markenaufbau' : 'دعم المختصين في مجالات التسويق وبناء الهوية الرقمية'}</li>
+          </ul>
+        </div>
+
+        <div class="bg-surface-container-lowest rounded-xl p-md shadow-sm">
+          <h2 class="font-headline-md text-headline-md text-primary mb-sm">
+            {isDe ? '💛 Unsere Werte' : '💛 قيمنا'}
+          </h2>
+          <p class="font-body-md text-body-md text-on-surface mb-sm">
+            {isDe ? 'Wir stützen uns auf eine Reihe von Grundwerten:' : 'نرتكز على مجموعة من القيم الأساسية:'}
+          </p>
+          <ul class="list-disc list-inside space-y-1 font-body-md text-body-md text-on-surface">
+            <li><strong>{isDe ? 'Menschlichkeit & Respekt' : 'الإنسانية والاحترام'}</strong> – {isDe ? 'jeder Mensch wird mit Würde und Wertschätzung behandelt' : 'التعامل مع كل شخص بكرامة واهتمام'}</li>
+            <li><strong>{isDe ? 'Sichere psychologische Unterstützung' : 'الدعم النفسي الآمن'}</strong> – {isDe ? 'ein geschützter Raum für Ausdruck und Heilung' : 'توفير مساحة آمنة للتعبير والتعافي'}</li>
+            <li><strong>{isDe ? 'Kontinuierliche Weiterentwicklung' : 'التطوير المستمر'}</strong> – {isDe ? 'ständige Verbesserung unserer Angebote' : 'تحسين الخدمات والبرامج بشكل دائم'}</li>
+            <li><strong>{isDe ? 'Professionalität & Wissenschaftlichkeit' : 'الاحترافية والعلمية'}</strong> – {isDe ? 'fundierte psychologische Grundlagen' : 'الاعتماد على أسس نفسية وعلمية موثوقة'}</li>
+            <li><strong>{isDe ? 'Inklusion & Vielfalt' : 'الشمولية والتنوع'}</strong> – {isDe ? 'Unterstützung aller Menschen ohne Diskriminierung' : 'دعم جميع الفئات دون تمييز'}</li>
+            <li><strong>{isDe ? 'Transparenz & Vertrauen' : 'الشفافية والثقة'}</strong> – {isDe ? 'offene und ehrliche Kommunikation' : 'بناء علاقة واضحة وصادقة مع المستفيدين'}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

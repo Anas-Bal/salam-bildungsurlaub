@@ -1,0 +1,477 @@
+[
+
+  {
+    "slug": "stressmanagement-burnout-praevention",
+    "de": {
+      "title": "Stressmanagement & Burnout-Prävention",
+      "subtitle": "Praktische Methoden zur Stressreduktion und Burnout-Prävention",
+      "description": "Dieser Kurs vermittelt wirksame Methoden zur Stressbewältigung und Burnout-Prävention. Die Teilnehmenden lernen, Stressauslöser zu erkennen, persönliche Ressourcen zu stärken und langfristig gesunde Bewältigungsstrategien zu entwickeln.",
+      "duration": "5 Tage",
+      "location": "Aleppo",
+      "pensum": "7–8 Unterrichtsstunden täglich",
+      "price": "200 €",
+      "includes": ["Unterrichtsmaterial", "Teilnahmezertifikat", "Tägliches Mittagessen", "Kaffeepausen"],
+      "dates": ["05.01.2027 – 09.01.2027", "02.02.2027 – 06.02.2027", "02.03.2027 – 06.03.2027"],
+      "lernziele": [
+        "Stressauslöser und persönliche Stressmuster erkennen",
+        "Wirksame Entspannungstechniken erlernen und anwenden",
+        "Praktische Methoden zur langfristigen Stressreduktion entwickeln",
+        "Frühwarnzeichen von Burnout identifizieren",
+        "Individuellen Stressmanagement-Plan erstellen"
+      ],
+      "kursmodule": [
+        { "title": "Grundlagen von Stress & Burnout", "description": "Biologische und psychologische Grundlagen von Stress. Unterscheidung zwischen gesundem und schädlichem Stress." },
+        { "title": "Entspannungstechniken", "description": "Praktische Übungen zu progressiver Muskelentspannung, Atemtechniken und Meditation." },
+        { "title": "Zeit- und Selbstmanagement", "description": "Effektive Planung und Priorisierung zur Reduzierung von Stress im Arbeitsalltag." },
+        { "title": "Resilienz & Ressourcenstärkung", "description": "Aufbau persönlicher Schutzfaktoren und Stärkung der psychischen Widerstandskraft." },
+        { "title": "Individueller Stressmanagement-Plan", "description": "Erstellung eines massgeschneiderten Plans für den nachhaltigen Umgang mit Stress." }
+      ],
+      "anerkennung": {
+        "bundeslaender": [
+          { "name": "Baden-Württemberg", "status": "beantragt" },
+          { "name": "Berlin", "status": "beantragt" },
+          { "name": "Brandenburg", "status": "beantragt" },
+          { "name": "Bremen", "status": "beantragt" },
+          { "name": "Hamburg", "status": "beantragt" },
+          { "name": "Hessen", "status": "beantragt" },
+          { "name": "Mecklenburg-Vorpommern", "status": "beantragt" },
+          { "name": "Niedersachsen", "status": "beantragt" },
+          { "name": "Nordrhein-Westfalen", "status": "beantragt" },
+          { "name": "Rheinland-Pfalz", "status": "beantragt" },
+          { "name": "Saarland", "status": "beantragt" },
+          { "name": "Sachsen-Anhalt", "status": "beantragt" },
+          { "name": "Schleswig-Holstein", "status": "beantragt" },
+          { "name": "Thüringen", "status": "beantragt" },
+          { "name": "Bayern", "status": "kein_recht" },
+          { "name": "Sachsen", "status": "kein_recht" }
+        ]
+      }
+    },
+    "ar": {
+      "title": "إدارة الضغط النفسي والوقاية من الاحتراق الوظيفي",
+      "subtitle": "أساليب عملية لإدارة الضغط النفسي والوقاية من الاحتراق الوظيفي",
+      "description": "تقدم هذه الدورة الممتدة على مدار خمسة أيام أساليب عملية لإدارة الضغط النفسي والوقاية من الاحتراق الوظيفي في الحياة المهنية والشخصية. يتعلم المشاركون كيفية التعرف المبكر على مسببات التوتر، وتعزيز الموارد النفسية، وتحقيق توازن صحي ومستدام بين العمل والرفاه النفسي.",
+      "duration": "5 أيام",
+      "location": "حلب",
+      "pensum": "7–8 ساعات دراسية يومياً",
+      "price": "200 يورو",
+      "includes": ["المواد التعليمية", "شهادة مشاركة", "وجبة غداء يومية", "استراحات قهوة"],
+      "dates": ["05.01.2027 – 09.01.2027", "02.02.2027 – 06.02.2027", "02.03.2027 – 06.03.2027"],
+      "lernziele": [
+        "التعرف على مصادر الضغط النفسي وتحليلها",
+        "تطوير استراتيجيات للوقاية من الاحتراق الوظيفي",
+        "تطبيق تقنيات تنظيم المشاعر والتحكم بالتوتر",
+        "تعزيز المرونة النفسية",
+        "بناء روتين صحي للعمل والراحة"
+      ],
+      "kursmodule": [
+        { "title": "مقدمة حول التوتر والصحة النفسية", "description": "مدخل لفهم العلاقة بين التوتر والصحة النفسية وأسس إدارة الضغط." },
+        { "title": "التعرف على مسببات الضغط والتأمل الذاتي", "description": "تحليل مصادر الضغط الشخصية والمهنية من خلال التأمل والوعي الذاتي." },
+        { "title": "تقنيات عملية: التنفس، اليقظة الذهنية، والاسترخاء", "description": "تمارين عملية للتنفس واليقظة الذهنية والاسترخاء للتخفيف من التوتر." },
+        { "title": "المرونة النفسية والاستقرار العاطفي في بيئة العمل", "description": "تعزيز المرونة النفسية والاستقرار العاطفي للتعامل مع ضغوط العمل." },
+        { "title": "إعداد خطة شخصية للصحة النفسية والتطبيق المستدام", "description": "وضع خطة فردية للحفاظ على الصحة النفسية وتطبيقها بشكل مستدام." }
+      ],
+      "anerkennung": {
+        "bundeslaender": [
+          { "name": "بادن-فورتمبيرغ", "status": "beantragt" },
+          { "name": "برلين", "status": "beantragt" },
+          { "name": "براندنبورغ", "status": "beantragt" },
+          { "name": "بريمن", "status": "beantragt" },
+          { "name": "هامبورغ", "status": "beantragt" },
+          { "name": "هسن", "status": "beantragt" },
+          { "name": "مكلنبورغ-فوربومرن", "status": "beantragt" },
+          { "name": "ساكسونيا السفلى", "status": "beantragt" },
+          { "name": "شمال الراين-وستفاليا", "status": "beantragt" },
+          { "name": "راينلاند-بفالز", "status": "beantragt" },
+          { "name": "سارلاند", "status": "beantragt" },
+          { "name": "ساكسونيا-آنهالت", "status": "beantragt" },
+          { "name": "شليسفيغ-هولشتاين", "status": "beantragt" },
+          { "name": "تورينغن", "status": "beantragt" },
+          { "name": "بافاريا", "status": "kein_recht" },
+          { "name": "ساكسونيا", "status": "kein_recht" }
+        ]
+      }
+    },
+    "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&q=80"
+  },
+
+  {
+    "slug": "achtsamkeit-mentale-balance",
+    "de": {
+      "title": "Achtsamkeit & Mentale Balance im Alltag",
+      "subtitle": "Mehr Achtsamkeit und innere Ruhe für den beruflichen Alltag",
+      "description": "Dieser Kurs führt in die Praxis der Achtsamkeit ein und zeigt, wie sie im beruflichen Alltag verankert werden kann. Die Teilnehmenden lernen verschiedene Meditationstechniken und Achtsamkeitsübungen kennen.",
+      "duration": "5 Tage",
+      "location": "Aleppo",
+      "pensum": "7–8 Unterrichtsstunden täglich",
+      "price": "200 €",
+      "includes": ["Unterrichtsmaterial", "Teilnahmezertifikat", "Tägliches Mittagessen", "Kaffeepausen"],
+      "dates": ["06.04.2027 – 10.04.2027", "04.05.2027 – 08.05.2027", "01.06.2027 – 05.06.2027"],
+      "lernziele": [
+        "Grundlagen der Achtsamkeit verstehen und praktizieren",
+        "Verschiedene Meditationstechniken kennenlernen",
+        "Achtsamkeit in den beruflichen Alltag integrieren",
+        "Emotionale Balance und innere Ruhe fördern",
+        "Stressreduktion durch achtsame Praxis erreichen"
+      ],
+      "kursmodule": [
+        { "title": "Einführung in die Achtsamkeit", "description": "Geschichte, Definition und wissenschaftliche Grundlagen der Achtsamkeit. MBSR und andere etablierte Ansätze." },
+        { "title": "Meditationstechniken", "description": "Geführte Meditationen, Body-Scan, Sitz- und Gehmeditation. Praktische Übungen für den Einstieg." },
+        { "title": "Achtsamkeit im Beruf", "description": "Integration von Achtsamkeit in den Arbeitsalltag. Achtsame Kommunikation und stressfreie Arbeitsgestaltung." },
+        { "title": "Emotionsregulation & Selbstfürsorge", "description": "Umgang mit schwierigen Emotionen durch achtsame Praxis. Entwicklung einer gesunden Selbstfürsorgeroutine." },
+        { "title": "Achtsamkeitstagebuch & Vertiefung", "description": "Erstellung eines persönlichen Achtsamkeitstagebuchs und langfristige Verankerung der Praxis." }
+      ],
+      "anerkennung": {
+        "bundeslaender": [
+          { "name": "Baden-Württemberg", "status": "beantragt" },
+          { "name": "Berlin", "status": "beantragt" },
+          { "name": "Brandenburg", "status": "beantragt" },
+          { "name": "Bremen", "status": "beantragt" },
+          { "name": "Hamburg", "status": "beantragt" },
+          { "name": "Hessen", "status": "beantragt" },
+          { "name": "Mecklenburg-Vorpommern", "status": "beantragt" },
+          { "name": "Niedersachsen", "status": "beantragt" },
+          { "name": "Nordrhein-Westfalen", "status": "beantragt" },
+          { "name": "Rheinland-Pfalz", "status": "beantragt" },
+          { "name": "Saarland", "status": "beantragt" },
+          { "name": "Sachsen-Anhalt", "status": "beantragt" },
+          { "name": "Schleswig-Holstein", "status": "beantragt" },
+          { "name": "Thüringen", "status": "beantragt" },
+          { "name": "Bayern", "status": "kein_recht" },
+          { "name": "Sachsen", "status": "kein_recht" }
+        ]
+      }
+    },
+    "ar": {
+      "title": "اليقظة الذهنية والتوازن النفسي في الحياة اليومية",
+      "subtitle": "تعزيز الوعي الذهني والتوازن الداخلي في الحياة اليومية",
+      "description": "تساعد هذه الدورة المشاركين على إدخال المزيد من الوعي الذهني والتوازن الداخلي إلى حياتهم اليومية. ومن خلال تمارين عملية وأساليب علمية، يتعلم المشاركون كيفية التعامل بوعي أكبر مع الأفكار والمشاعر والضغوط.",
+      "duration": "5 أيام",
+      "location": "حلب",
+      "pensum": "7–8 ساعات دراسية يومياً",
+      "price": "200 يورو",
+      "includes": ["المواد التعليمية", "شهادة مشاركة", "وجبة غداء يومية", "استراحات قهوة"],
+      "dates": ["06.04.2027 – 10.04.2027", "04.05.2027 – 08.05.2027", "01.06.2027 – 05.06.2027"],
+      "lernziele": [
+        "فهم أساسيات اليقظة الذهنية",
+        "تحسين التركيز والوعي الذاتي",
+        "تقليل الضغوط النفسية",
+        "تعزيز الاستقرار العاطفي",
+        "تطبيق تقنيات اليقظة الذهنية في الحياة اليومية"
+      ],
+      "kursmodule": [
+        { "title": "مقدمة في اليقظة الذهنية والصحة النفسية", "description": "مدخل لفهم اليقظة الذهنية وعلاقتها بالصحة النفسية والتوازن الداخلي." },
+        { "title": "فهم الأفكار والمشاعر والإدراك", "description": "التعرف على أنماط التفكير والمشاعر وكيفية التعامل معها بوعي." },
+        { "title": "التأمل وتمارين التنفس والاسترخاء", "description": "تقنيات التأمل والتنفس العميق والاسترخاء لتعزيز الهدوء الداخلي." },
+        { "title": "اليقظة الذهنية في العمل والعلاقات", "description": "تطبيق اليقظة الذهنية في بيئة العمل والعلاقات الشخصية." },
+        { "title": "بناء روتين شخصي لتحقيق التوازن النفسي", "description": "إعداد خطة يومية للحفاظ على التوازن النفسي من خلال ممارسات اليقظة." }
+      ],
+      "anerkennung": {
+        "bundeslaender": [
+          { "name": "بادن-فورتمبيرغ", "status": "beantragt" },
+          { "name": "برلين", "status": "beantragt" },
+          { "name": "براندنبورغ", "status": "beantragt" },
+          { "name": "بريمن", "status": "beantragt" },
+          { "name": "هامبورغ", "status": "beantragt" },
+          { "name": "هسن", "status": "beantragt" },
+          { "name": "مكلنبورغ-فوربومرن", "status": "beantragt" },
+          { "name": "ساكسونيا السفلى", "status": "beantragt" },
+          { "name": "شمال الراين-وستفاليا", "status": "beantragt" },
+          { "name": "راينلاند-بفالز", "status": "beantragt" },
+          { "name": "سارلاند", "status": "beantragt" },
+          { "name": "ساكسونيا-آنهالت", "status": "beantragt" },
+          { "name": "شليسفيغ-هولشتاين", "status": "beantragt" },
+          { "name": "تورينغن", "status": "beantragt" },
+          { "name": "بافاريا", "status": "kein_recht" },
+          { "name": "ساكسونيا", "status": "kein_recht" }
+        ]
+      }
+    },
+    "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80"
+  },
+
+  {
+    "slug": "resilienztraining",
+    "de": {
+      "title": "Resilienztraining für Beruf und Alltag",
+      "subtitle": "Psychische Widerstandskraft aufbauen und stärken",
+      "description": "Dieses Training vermittelt wissenschaftlich fundierte Methoden zur Stärkung der psychischen Widerstandskraft. Die Teilnehmenden lernen, Herausforderungen flexibel zu begegnen und gestärkt aus Krisen hervorzugehen.",
+      "duration": "5 Tage",
+      "location": "Aleppo",
+      "pensum": "7–8 Unterrichtsstunden täglich",
+      "price": "200 €",
+      "includes": ["Unterrichtsmaterial", "Teilnahmezertifikat", "Tägliches Mittagessen", "Kaffeepausen"],
+      "dates": ["06.07.2027 – 10.07.2027", "03.08.2027 – 07.08.2027"],
+      "lernziele": [
+        "Die 7 Säulen der Resilienz kennen und anwenden",
+        "Eigene Bewältigungsstrategien reflektieren und erweitern",
+        "Optimismus und Selbstwirksamkeit stärken",
+        "Akzeptanz und Lösungsorientierung entwickeln",
+        "Soziale Netzwerke als Schutzfaktor nutzen"
+      ],
+      "kursmodule": [
+        { "title": "Grundlagen der Resilienz", "description": "Definition, Modelle und wissenschaftliche Erkenntnisse zur psychischen Widerstandskraft." },
+        { "title": "Die 7 Säulen der Resilienz", "description": "Optimismus, Akzeptanz, Lösungsorientierung, Opferrolle verlassen, Zukunftsplanung, Selbstwahrnehmung, soziale Netzwerke." },
+        { "title": "Resilienz im Berufsalltag", "description": "Anwendung der Resilienzfaktoren im Arbeitskontext. Umgang mit Veränderungen, Druck und Rückschlägen." },
+        { "title": "Persönliche Ressourcenaktivierung", "description": "Identifikation und Stärkung persönlicher Schutzfaktoren. Aufbau eines individuellen Ressourcenpools." },
+        { "title": "Resilienzplan & Transfer", "description": "Erstellung eines persönlichen Resilienzplans für den nachhaltigen Transfer in den Alltag." }
+      ],
+      "anerkennung": {
+        "bundeslaender": [
+          { "name": "Baden-Württemberg", "status": "beantragt" },
+          { "name": "Berlin", "status": "beantragt" },
+          { "name": "Brandenburg", "status": "beantragt" },
+          { "name": "Bremen", "status": "beantragt" },
+          { "name": "Hamburg", "status": "beantragt" },
+          { "name": "Hessen", "status": "beantragt" },
+          { "name": "Mecklenburg-Vorpommern", "status": "beantragt" },
+          { "name": "Niedersachsen", "status": "beantragt" },
+          { "name": "Nordrhein-Westfalen", "status": "beantragt" },
+          { "name": "Rheinland-Pfalz", "status": "beantragt" },
+          { "name": "Saarland", "status": "beantragt" },
+          { "name": "Sachsen-Anhalt", "status": "beantragt" },
+          { "name": "Schleswig-Holstein", "status": "beantragt" },
+          { "name": "Thüringen", "status": "beantragt" },
+          { "name": "Bayern", "status": "kein_recht" },
+          { "name": "Sachsen", "status": "kein_recht" }
+        ]
+      }
+    },
+    "ar": {
+      "title": "تدريب المرونة النفسية للحياة والعمل",
+      "subtitle": "تعزيز القدرة النفسية على مواجهة التحديات والضغوط",
+      "description": "تركز هذه الدورة على تعزيز القدرة النفسية على مواجهة التحديات والضغوط والتغيرات بطريقة صحية وفعالة. ويتركز الاهتمام على تقوية الاستقرار النفسي والرعاية الذاتية والتفكير الإيجابي.",
+      "duration": "5 أيام",
+      "location": "حلب",
+      "pensum": "7–8 ساعات دراسية يومياً",
+      "price": "200 يورو",
+      "includes": ["المواد التعليمية", "شهادة مشاركة", "وجبة غداء يومية", "استراحات قهوة"],
+      "dates": ["06.07.2027 – 10.07.2027", "03.08.2027 – 07.08.2027"],
+      "lernziele": [
+        "التعرف على عوامل المرونة النفسية",
+        "التعامل البناء مع الضغوط والأزمات",
+        "تعزيز الرعاية الذاتية والقوة النفسية",
+        "تطوير التفكير القائم على الحلول",
+        "تقوية الدافعية والمرونة الذهنية"
+      ],
+      "kursmodule": [
+        { "title": "أساسيات المرونة النفسية", "description": "مدخل لفهم المرونة النفسية وأسس بناء القدرة على مواجهة التحديات." },
+        { "title": "التعامل مع الضغوط والأزمات", "description": "استراتيجيات عملية للتعامل مع الضغوط والأزمات بطريقة بناءة." },
+        { "title": "الذكاء العاطفي والتواصل", "description": "تعزيز الذكاء العاطفي ومهارات التواصل لدعم العلاقات الصحية." },
+        { "title": "الرعاية الذاتية والقوة النفسية", "description": "تطوير ممارسات الرعاية الذاتية وتعزيز القوة النفسية الداخلية." },
+        { "title": "استراتيجيات مستدامة للحياة والعمل", "description": "بناء استراتيجيات طويلة المدى للمرونة النفسية في الحياة والعمل." }
+      ],
+      "anerkennung": {
+        "bundeslaender": [
+          { "name": "بادن-فورتمبيرغ", "status": "beantragt" },
+          { "name": "برلين", "status": "beantragt" },
+          { "name": "براندنبورغ", "status": "beantragt" },
+          { "name": "بريمن", "status": "beantragt" },
+          { "name": "هامبورغ", "status": "beantragt" },
+          { "name": "هسن", "status": "beantragt" },
+          { "name": "مكلنبورغ-فوربومرن", "status": "beantragt" },
+          { "name": "ساكسونيا السفلى", "status": "beantragt" },
+          { "name": "شمال الراين-وستفاليا", "status": "beantragt" },
+          { "name": "راينلاند-بفالز", "status": "beantragt" },
+          { "name": "سارلاند", "status": "beantragt" },
+          { "name": "ساكسونيا-آنهالت", "status": "beantragt" },
+          { "name": "شليسفيغ-هولشتاين", "status": "beantragt" },
+          { "name": "تورينغن", "status": "beantragt" },
+          { "name": "بافاريا", "status": "kein_recht" },
+          { "name": "ساكسونيا", "status": "kein_recht" }
+        ]
+      }
+    },
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+  },
+
+  {
+    "slug": "kommunikation-emotionen",
+    "de": {
+      "title": "Kommunikation, Emotionen & Psychische Gesundheit",
+      "subtitle": "Kommunikations- und Selbstreflexionskompetenzen für psychische Gesundheit",
+      "description": "Dieser Kurs vermittelt wichtige Kommunikations- und Selbstreflexionskompetenzen zur Förderung psychischer Gesundheit im beruflichen und sozialen Umfeld. Die Teilnehmenden lernen, Konflikte konstruktiv zu lösen und empathischer zu kommunizieren.",
+      "duration": "5 Tage",
+      "location": "Aleppo",
+      "pensum": "7–8 Unterrichtsstunden täglich",
+      "price": "200 €",
+      "includes": ["Unterrichtsmaterial", "Teilnahmezertifikat", "Tägliches Mittagessen", "Kaffeepausen"],
+      "dates": ["06.07.2027 – 10.07.2027", "03.08.2027 – 07.08.2027", "07.09.2027 – 11.09.2027"],
+      "lernziele": [
+        "Eigene Kommunikationsmuster verstehen",
+        "Empathie und aktives Zuhören verbessern",
+        "Konflikte konstruktiv lösen",
+        "Emotionen besser regulieren",
+        "Psychisch gesunde Kommunikation im Alltag anwenden"
+      ],
+      "kursmodule": [
+        { "title": "Grundlagen psychologischer Kommunikation", "description": "Einführung in die Psychologie der Kommunikation. Modelle des Senders und Empfangens von Nachrichten und deren Auswirkungen auf Beziehungen." },
+        { "title": "Emotionen verstehen und ausdrücken", "description": "Erkennung und Regulation eigener Emotionen. Gesunde Ausdrucksformen für Gefühle im beruflichen und privaten Kontext." },
+        { "title": "Konfliktmanagement & aktives Zuhören", "description": "Techniken zur konstruktiven Konfliktlösung und die Praxis des aktiven Zuhörens als Schlüsselkompetenz für bessere Verständigung." },
+        { "title": "Kommunikation im beruflichen Umfeld", "description": "Anwendung gesunder Kommunikationsstrategien im Arbeitskontext. Umgang mit schwierigen Gesprächen und Feedback." },
+        { "title": "Praktische Übungen & Transfer in den Alltag", "description": "Abschlussübungen zur Integration der erlernten Kommunikationskompetenzen in den persönlichen und beruflichen Alltag." }
+      ],
+      "anerkennung": {
+        "bundeslaender": [
+          { "name": "Baden-Württemberg", "status": "beantragt" },
+          { "name": "Berlin", "status": "beantragt" },
+          { "name": "Brandenburg", "status": "beantragt" },
+          { "name": "Bremen", "status": "beantragt" },
+          { "name": "Hamburg", "status": "beantragt" },
+          { "name": "Hessen", "status": "beantragt" },
+          { "name": "Mecklenburg-Vorpommern", "status": "beantragt" },
+          { "name": "Niedersachsen", "status": "beantragt" },
+          { "name": "Nordrhein-Westfalen", "status": "beantragt" },
+          { "name": "Rheinland-Pfalz", "status": "beantragt" },
+          { "name": "Saarland", "status": "beantragt" },
+          { "name": "Sachsen-Anhalt", "status": "beantragt" },
+          { "name": "Schleswig-Holstein", "status": "beantragt" },
+          { "name": "Thüringen", "status": "beantragt" },
+          { "name": "Bayern", "status": "kein_recht" },
+          { "name": "Sachsen", "status": "kein_recht" }
+        ]
+      }
+    },
+    "ar": {
+      "title": "التواصل والمشاعر والصحة النفسية",
+      "subtitle": "مهارات التواصل والتأمل الذاتي لدعم الصحة النفسية",
+      "description": "توفر هذه الدورة مهارات مهمة في التواصل والتأمل الذاتي لدعم الصحة النفسية في بيئة العمل والحياة الاجتماعية. كما تساعد المشاركين على حل النزاعات بطريقة بنّاءة وتعزيز التواصل المتعاطف.",
+      "duration": "5 أيام",
+      "location": "حلب",
+      "pensum": "7–8 ساعات دراسية يومياً",
+      "price": "200 يورو",
+      "includes": ["المواد التعليمية", "شهادة مشاركة", "وجبة غداء يومية", "استراحات قهوة"],
+      "dates": ["06.07.2027 – 10.07.2027", "03.08.2027 – 07.08.2027", "07.09.2027 – 11.09.2027"],
+      "lernziele": [
+        "فهم أنماط التواصل الشخصية",
+        "تعزيز التعاطف والاستماع الفعّال",
+        "إدارة النزاعات بشكل بنّاء",
+        "تحسين القدرة على تنظيم المشاعر",
+        "تطبيق تواصل صحي نفسياً في الحياة اليومية"
+      ],
+      "kursmodule": [
+        { "title": "أساسيات التواصل النفسي", "description": "مدخل لفهم أساسيات التواصل النفسي وأثره على العلاقات والصحة النفسية." },
+        { "title": "فهم المشاعر والتعبير عنها", "description": "التعرف على المشاعر الشخصية وتعلم طرق صحية للتعبير عنها." },
+        { "title": "إدارة النزاعات والاستماع الفعّال", "description": "تقنيات حل النزاعات والاستماع الفعّال كأداة للتفاهم والتواصل." },
+        { "title": "التواصل في بيئة العمل", "description": "تطبيق استراتيجيات التواصل الصحي في السياق المهني." },
+        { "title": "تطبيقات عملية ونقل المهارات للحياة اليومية", "description": "تمارين تطبيقية لدمج مهارات التواصل في الحياة اليومية." }
+      ],
+      "anerkennung": {
+        "bundeslaender": [
+          { "name": "بادن-فورتمبيرغ", "status": "beantragt" },
+          { "name": "برلين", "status": "beantragt" },
+          { "name": "براندنبورغ", "status": "beantragt" },
+          { "name": "بريمن", "status": "beantragt" },
+          { "name": "هامبورغ", "status": "beantragt" },
+          { "name": "هسن", "status": "beantragt" },
+          { "name": "مكلنبورغ-فوربومرن", "status": "beantragt" },
+          { "name": "ساكسونيا السفلى", "status": "beantragt" },
+          { "name": "شمال الراين-وستفاليا", "status": "beantragt" },
+          { "name": "راينلاند-بفالز", "status": "beantragt" },
+          { "name": "سارلاند", "status": "beantragt" },
+          { "name": "ساكسونيا-آنهالت", "status": "beantragt" },
+          { "name": "شليسفيغ-هولشتاين", "status": "beantragt" },
+          { "name": "تورينغن", "status": "beantragt" },
+          { "name": "بافاريا", "status": "kein_recht" },
+          { "name": "ساكسونيا", "status": "kein_recht" }
+        ]
+      }
+    },
+    "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80"
+  },
+
+  {
+    "slug": "digitale-gesundheit",
+    "de": {
+      "title": "Digitale Gesundheit & Mental Wellbeing",
+      "subtitle": "Gesunder Umgang mit digitalen Medien für mentales Wohlbefinden",
+      "description": "Der Kurs beschäftigt sich mit den Auswirkungen digitaler Medien auf die psychische Gesundheit und zeigt Wege zu einem gesunden digitalen Alltag auf. Teilnehmende lernen Strategien für bewussten Medienkonsum und mentale Balance.",
+      "duration": "5 Tage",
+      "location": "Aleppo",
+      "pensum": "7–8 Unterrichtsstunden täglich",
+      "price": "200 €",
+      "includes": ["Unterrichtsmaterial", "Teilnahmezertifikat", "Tägliches Mittagessen", "Kaffeepausen"],
+      "dates": ["05.10.2027 – 09.10.2027", "02.11.2027 – 06.11.2027", "07.12.2027 – 11.12.2027"],
+      "lernziele": [
+        "Auswirkungen digitaler Belastung verstehen",
+        "Gesunde digitale Gewohnheiten entwickeln",
+        "Konzentration und mentale Ruhe fördern",
+        "Stress durch digitale Überforderung reduzieren",
+        "Digitale Selbstfürsorge im Alltag anwenden"
+      ],
+      "kursmodule": [
+        { "title": "Digitale Medien und mentale Gesundheit", "description": "Einfluss von Smartphone, Social Media und Bildschirmzeit auf die psychische Gesundheit. Suchtmechanismen und Aufmerksamkeitssteuerung." },
+        { "title": "Stress, Reizüberflutung & Konzentration", "description": "Auswirkungen digitaler Reizüberflutung auf Stresslevel und Konzentrationsfähigkeit. Strategien zur Reduzierung digitaler Ablenkung." },
+        { "title": "Digitale Balance und Selbstmanagement", "description": "Methoden zur bewussten Nutzung digitaler Medien. Digital Detox, Bildschirmzeit-Management und gesunde Online-Routinen." },
+        { "title": "Praktische Übungen zur mentalen Entlastung", "description": "Konkrete Übungen zur mentalen Erholung von digitaler Belastung. Offline-Zeiten und Achtsamkeit in der digitalen Welt." },
+        { "title": "Entwicklung eines persönlichen Digital-Wellbeing-Plans", "description": "Erstellung eines individuellen Plans für digitale Gesundheit mit nachhaltigen Massnahmen für den Alltag." }
+      ],
+      "anerkennung": {
+        "bundeslaender": [
+          { "name": "Baden-Württemberg", "status": "beantragt" },
+          { "name": "Berlin", "status": "beantragt" },
+          { "name": "Brandenburg", "status": "beantragt" },
+          { "name": "Bremen", "status": "beantragt" },
+          { "name": "Hamburg", "status": "beantragt" },
+          { "name": "Hessen", "status": "beantragt" },
+          { "name": "Mecklenburg-Vorpommern", "status": "beantragt" },
+          { "name": "Niedersachsen", "status": "beantragt" },
+          { "name": "Nordrhein-Westfalen", "status": "beantragt" },
+          { "name": "Rheinland-Pfalz", "status": "beantragt" },
+          { "name": "Saarland", "status": "beantragt" },
+          { "name": "Sachsen-Anhalt", "status": "beantragt" },
+          { "name": "Schleswig-Holstein", "status": "beantragt" },
+          { "name": "Thüringen", "status": "beantragt" },
+          { "name": "Bayern", "status": "kein_recht" },
+          { "name": "Sachsen", "status": "kein_recht" }
+        ]
+      }
+    },
+    "ar": {
+      "title": "الصحة الرقمية والرفاه النفسي",
+      "subtitle": "بناء عادات رقمية صحية لتحقيق التوازن والرفاه النفسي",
+      "description": "تناقش هذه الدورة تأثير الوسائل الرقمية ووسائل التواصل على الصحة النفسية، وتقدم طرقاً عملية لتحقيق توازن رقمي صحي. يتعلم المشاركون كيفية بناء عادات رقمية صحية وتقليل الإرهاق الذهني الناتج عن الاستخدام المفرط للتكنولوجيا.",
+      "duration": "5 أيام",
+      "location": "حلب",
+      "pensum": "7–8 ساعات دراسية يومياً",
+      "price": "200 يورو",
+      "includes": ["المواد التعليمية", "شهادة مشاركة", "وجبة غداء يومية", "استراحات قهوة"],
+      "dates": ["05.10.2027 – 09.10.2027", "02.11.2027 – 06.11.2027", "07.12.2027 – 11.12.2027"],
+      "lernziele": [
+        "فهم تأثير الضغوط الرقمية على الصحة النفسية",
+        "تطوير عادات رقمية صحية",
+        "تعزيز التركيز والهدوء الذهني",
+        "تقليل التوتر الناتج عن الإرهاق الرقمي",
+        "تطبيق أساليب الرعاية الذاتية الرقمية"
+      ],
+      "kursmodule": [
+        { "title": "الوسائل الرقمية والصحة النفسية", "description": "مدخل لفهم تأثير الوسائل الرقمية على الصحة النفسية والرفاه." },
+        { "title": "التشتت والإرهاق الذهني والتركيز", "description": "تحليل أسباب التشتت والإرهاق الذهني الرقمي واستراتيجيات تحسين التركيز." },
+        { "title": "التوازن الرقمي وإدارة الذات", "description": "أساليب لتحقيق التوازن الرقمي وإدارة استخدام التكنولوجيا بوعي." },
+        { "title": "تمارين عملية للتخفيف الذهني", "description": "تمارين للتعافي الذهني من الإجهاد الرقمي واستعادة الهدوء الداخلي." },
+        { "title": "إعداد خطة شخصية للرفاه الرقمي", "description": "وضع خطة فردية للرفاه الرقمي والصحة النفسية في العصر الرقمي." }
+      ],
+      "anerkennung": {
+        "bundeslaender": [
+          { "name": "بادن-فورتمبيرغ", "status": "beantragt" },
+          { "name": "برلين", "status": "beantragt" },
+          { "name": "براندنبورغ", "status": "beantragt" },
+          { "name": "بريمن", "status": "beantragt" },
+          { "name": "هامبورغ", "status": "beantragt" },
+          { "name": "هسن", "status": "beantragt" },
+          { "name": "مكلنبورغ-فوربومرن", "status": "beantragt" },
+          { "name": "ساكسونيا السفلى", "status": "beantragt" },
+          { "name": "شمال الراين-وستفاليا", "status": "beantragt" },
+          { "name": "راينلاند-بفالز", "status": "beantragt" },
+          { "name": "سارلاند", "status": "beantragt" },
+          { "name": "ساكسونيا-آنهالت", "status": "beantragt" },
+          { "name": "شليسفيغ-هولشتاين", "status": "beantragt" },
+          { "name": "تورينغن", "status": "beantragt" },
+          { "name": "بافاريا", "status": "kein_recht" },
+          { "name": "ساكسونيا", "status": "kein_recht" }
+        ]
+      }
+    },
+    "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80"
+  }
+]
