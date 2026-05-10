@@ -69,7 +69,7 @@
   --spacing-xl: 4rem;
   --spacing-gutter: 24px;
   --spacing-margin: 32px;
-  --text-headline-xl: 48px;
+  --text-headline-xl: clamp(1.75rem, 4.5vw, 3rem);
   --text-headline-lg: 32px;
   --text-headline-md: 24px;
   --text-body-lg: 18px;
@@ -88,6 +88,11 @@
   --font-weight-body-lg: 400;
   --font-weight-body-md: 400;
   --font-weight-label-sm: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .material-symbols-outlined {
