@@ -4,7 +4,7 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://salam-bildungsurlaub.de',
+  site: 'https://salam-bildungsurlaub.com',
   integrations: [sitemap()],
   adapter: vercel(),
 });

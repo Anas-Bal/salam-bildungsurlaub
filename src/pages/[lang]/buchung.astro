@@ -134,7 +134,7 @@ for (const p of programs) {
       for (const [key, value] of formData.entries()) {
         entries.push(key + ': ' + value);
       }
-      const mailto = 'mailto:info@salam-bildungsurlaub.de?subject=Buchungsanfrage&body=' + encodeURIComponent(entries.join('\n'));
+      const mailto = 'mailto:info@salam-bildungsurlaub.com?subject=Buchungsanfrage&body=' + encodeURIComponent(entries.join('\n'));
       status.classList.remove('hidden');
       status.textContent = 'Vielen Dank! Ihre Anfrage wurde erfasst. Wir melden uns innerhalb von 24 Stunden.';
       status.className = 'text-center font-body-md text-body-md text-primary';
