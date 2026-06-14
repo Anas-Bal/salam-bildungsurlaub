@@ -133,7 +133,7 @@ const content = lang === 'de' ? program.de : program.ar;
               </div>
               <div class="flex justify-between">
                 <span class="font-label-sm text-label-sm text-on-surface-variant">{t('course.price', lang)}</span>
-                <span class="font-headline-md text-headline-md font-bold text-primary">{content.price}</span>
+                <span class="font-headline-md text-headline-md font-bold text-primary"><span class="line-through text-on-surface-variant font-normal mr-1">{content.originalPrice}</span> {content.price}</span>
               </div>
             </div>
 

@@ -10,6 +10,7 @@
       "location": "Aleppo",
       "pensum": "7–8 Unterrichtsstunden täglich",
       "price": "200 €",
+      "originalPrice": "350 €",
       "includes": ["Unterrichtsmaterial", "Teilnahmezertifikat", "Tägliches Mittagessen", "Kaffeepausen"],
       "dates": ["05.01.2027 – 09.01.2027", "02.02.2027 – 06.02.2027", "02.03.2027 – 06.03.2027"],
       "lernziele": [
@@ -55,6 +56,7 @@
       "location": "حلب",
       "pensum": "7–8 ساعات دراسية يومياً",
       "price": "200 يورو",
+      "originalPrice": "350 يورو",
       "includes": ["المواد التعليمية", "شهادة مشاركة", "وجبة غداء يومية", "استراحات قهوة"],
       "dates": ["05.01.2027 – 09.01.2027", "02.02.2027 – 06.02.2027", "02.03.2027 – 06.03.2027"],
       "lernziele": [
@@ -105,6 +107,7 @@
       "location": "Aleppo",
       "pensum": "7–8 Unterrichtsstunden täglich",
       "price": "200 €",
+      "originalPrice": "350 €",
       "includes": ["Unterrichtsmaterial", "Teilnahmezertifikat", "Tägliches Mittagessen", "Kaffeepausen"],
       "dates": ["06.04.2027 – 10.04.2027", "04.05.2027 – 08.05.2027", "01.06.2027 – 05.06.2027"],
       "lernziele": [
@@ -150,6 +153,7 @@
       "location": "حلب",
       "pensum": "7–8 ساعات دراسية يومياً",
       "price": "200 يورو",
+      "originalPrice": "350 يورو",
       "includes": ["المواد التعليمية", "شهادة مشاركة", "وجبة غداء يومية", "استراحات قهوة"],
       "dates": ["06.04.2027 – 10.04.2027", "04.05.2027 – 08.05.2027", "01.06.2027 – 05.06.2027"],
       "lernziele": [
@@ -200,6 +204,7 @@
       "location": "Aleppo",
       "pensum": "7–8 Unterrichtsstunden täglich",
       "price": "200 €",
+      "originalPrice": "350 €",
       "includes": ["Unterrichtsmaterial", "Teilnahmezertifikat", "Tägliches Mittagessen", "Kaffeepausen"],
       "dates": ["06.07.2027 – 10.07.2027", "03.08.2027 – 07.08.2027"],
       "lernziele": [
@@ -245,6 +250,7 @@
       "location": "حلب",
       "pensum": "7–8 ساعات دراسية يومياً",
       "price": "200 يورو",
+      "originalPrice": "350 يورو",
       "includes": ["المواد التعليمية", "شهادة مشاركة", "وجبة غداء يومية", "استراحات قهوة"],
       "dates": ["06.07.2027 – 10.07.2027", "03.08.2027 – 07.08.2027"],
       "lernziele": [
@@ -295,6 +301,7 @@
       "location": "Aleppo",
       "pensum": "7–8 Unterrichtsstunden täglich",
       "price": "200 €",
+      "originalPrice": "350 €",
       "includes": ["Unterrichtsmaterial", "Teilnahmezertifikat", "Tägliches Mittagessen", "Kaffeepausen"],
       "dates": ["06.07.2027 – 10.07.2027", "03.08.2027 – 07.08.2027", "07.09.2027 – 11.09.2027"],
       "lernziele": [
@@ -340,6 +347,7 @@
       "location": "حلب",
       "pensum": "7–8 ساعات دراسية يومياً",
       "price": "200 يورو",
+      "originalPrice": "350 يورو",
       "includes": ["المواد التعليمية", "شهادة مشاركة", "وجبة غداء يومية", "استراحات قهوة"],
       "dates": ["06.07.2027 – 10.07.2027", "03.08.2027 – 07.08.2027", "07.09.2027 – 11.09.2027"],
       "lernziele": [
@@ -390,6 +398,7 @@
       "location": "Aleppo",
       "pensum": "7–8 Unterrichtsstunden täglich",
       "price": "200 €",
+      "originalPrice": "350 €",
       "includes": ["Unterrichtsmaterial", "Teilnahmezertifikat", "Tägliches Mittagessen", "Kaffeepausen"],
       "dates": ["05.10.2027 – 09.10.2027", "02.11.2027 – 06.11.2027", "07.12.2027 – 11.12.2027"],
       "lernziele": [
@@ -435,6 +444,7 @@
       "location": "حلب",
       "pensum": "7–8 ساعات دراسية يومياً",
       "price": "200 يورو",
+      "originalPrice": "350 يورو",
       "includes": ["المواد التعليمية", "شهادة مشاركة", "وجبة غداء يومية", "استراحات قهوة"],
       "dates": ["05.10.2027 – 09.10.2027", "02.11.2027 – 06.11.2027", "07.12.2027 – 11.12.2027"],
       "lernziele": [
